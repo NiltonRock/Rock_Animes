@@ -7,7 +7,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Markdown
 ![alt text](https://github.com/NiltonRock/sample_pages/blob/master/images.jpeg)
 
-![GitHub Logo](/master/images.jpeg)
+![GitHub Logo](/sample_pages/images.jpeg )
 Format: ![Alt Text](url)
 
 
