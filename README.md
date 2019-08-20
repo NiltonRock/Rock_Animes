@@ -6,7 +6,6 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Markdown
 
-[https://github.com/NiltonRock/sample_pages/blob/master/images.jpeg]
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
