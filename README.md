@@ -1,8 +1,8 @@
 ## BEM VINDOS BOCOS
 
-You can use the [editor on GitHub](https://github.com/NiltonRock/sample_pages/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Pagina Compartilhada [editor on GitHub](https://github.com/NiltonRock/sample_pages/edit/master/README.md) em breve mais conteudo, aguarde!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Debrucios Bocó [Jekyll](https://jekyllrb.com/) ------------------------------------------------------------------------.
 
 ### Test Image
 
