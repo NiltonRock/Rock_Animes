@@ -1,11 +1,10 @@
-## Welcome to GitHub Pages
+## BEM VINDOS BOCOS
 
 You can use the [editor on GitHub](https://github.com/NiltonRock/sample_pages/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-![alt text](https://github.com/NiltonRock/sample_pages/blob/master/images.jpeg)
+### Test Image
 
 ![GitHub Logo](/sample_pages/images.jpeg )
 Format: ![Alt Text](url)
