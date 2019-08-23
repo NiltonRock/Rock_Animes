@@ -10,6 +10,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Format: ![Alt Text](url)
 
 ![GitHub Logo](/hqrock.github.io/One Punch Man 00 - Yusuke Murata.cbr)
+Format: ![Alt Text](url)
 
 
 
