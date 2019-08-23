@@ -9,6 +9,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ![GitHub Logo](/sample_pages/images.jpeg )
 Format: ![Alt Text](url)
 
+![GitHub Logo](/hqrock.github.io/One Punch Man 00 - Yusuke Murata.cbr)
+
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
