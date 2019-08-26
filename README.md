@@ -2,8 +2,8 @@
 
 ### Capítulo 913: Tsuru Retribui o Favor
 
-![GitHub Logo](/sample_pages/01.jpg)
-Format: ![Alt Text](/sample_pages/Capítulo #913: Tsuru Retribui o Favor.md)
+![GitHub Logo](/sample_pages/01_x.jpg)
+
 
 
 
@@ -24,7 +24,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](/sample_pages/Capítulo #913: Tsuru Retribui o Favor.md) and ![Image](/sample_pages/01_x.jpg)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
