@@ -6,7 +6,7 @@
 
 
 
-For more details see [GitHub Flavored Markdown](/sample_pages/Capítulo #913: Tsuru Retribui o Favor.md).
+For more details see [GitHub Flavored Markdown](/sample_pages/Capítulo 913- Tsuru Retribui o Favor.md).
 
 ### Jekyll Themes
 
