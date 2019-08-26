@@ -9,7 +9,7 @@ Debrucios Bocó [Jekyll](https://jekyllrb.com/) --------------------------------
 ![GitHub Logo](/sample_pages/images.jpeg )
 Format: ![Alt Text](url)
 
-### Capítulo #913: Tsuru Retribui o Favor
+### Capítulo 913: Tsuru Retribui o Favor
 
 ![GitHub Logo](/sample_pages/01.jpg)
 Format: ![Alt Text](url)
