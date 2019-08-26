@@ -1,18 +1,9 @@
 ## BEM VINDOS BOCOS
 
-Pagina Compartilhada [editor on GitHub](https://github.com/NiltonRock/sample_pages/edit/master/README.md) em breve mais conteudo, aguarde!
-
-Debrucios Bocó [Jekyll](https://jekyllrb.com/) ------------------------------------------------------------------------.
-
-### Test Image
-
-![GitHub Logo](/sample_pages/images.jpeg )
-Format: ![Alt Text](url)
-
 ### Capítulo 913: Tsuru Retribui o Favor
 
 ![GitHub Logo](/sample_pages/01.jpg)
-Format: ![Alt Text](url)
+Format: ![Alt Text](/sample_pages/Capítulo #913: Tsuru Retribui o Favor.md)
 
 
 
