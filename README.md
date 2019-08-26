@@ -9,7 +9,9 @@ Debrucios Bocó [Jekyll](https://jekyllrb.com/) --------------------------------
 ![GitHub Logo](/sample_pages/images.jpeg )
 Format: ![Alt Text](url)
 
-![GitHub Logo](/hqrock.github.io/One Punch Man 00 - Yusuke Murata.cbr)
+### Capítulo #913: Tsuru Retribui o Favor
+
+![GitHub Logo](/sample_pages/01.jpg)
 Format: ![Alt Text](url)
 
 
