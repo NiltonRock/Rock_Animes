@@ -12,7 +12,7 @@ NOVO MANGÁ [CAPÍTULO 913](/sample_pages/Capitulo913.html).
 
 
 ### TESTE VIDEO
-TESTE VIDEO [CAPÍTULO 913](/sample_pages/video.html).
+TESTE VIDEO [TESTE VIDEO](/sample_pages/video.html).
 
 ### Jekyll Themes
 
