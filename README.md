@@ -6,7 +6,12 @@
 
 
 
-NOVO MANGÁ [CAPÍTULO 913](/Rock_Animes/Capitulo913.html).
+ONE PIECE [CAPÍTULO 913](/Rock_Animes/Capitulo913.html).
+
+
+NOVO MANGÁ [CAPÍTULO 913](/Rock_Animes/onePiece/Capitulo914.html).
+
+
 
 
 
