@@ -5,11 +5,16 @@
 ![GitHub Logo](/Rock_Animes/01_x.jpg)
 
 
-
 ONE PIECE [CAPÍTULO 913](/Rock_Animes/Capitulo913.html).
 
 
-NOVO MANGÁ [CAPÍTULO 913](/Rock_Animes/onePiece/Capitulo914.html).
+### Capítulo 914 Okobore, a Cidade das Sobras
+
+
+![GitHub Logo](/Rock_Animes/onePiece/Capitlo914/01_x.jpg)
+
+
+ONE PIECE [CAPÍTULO 914](/Rock_Animes/onePiece/Capitulo914.html).
 
 
 
