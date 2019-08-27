@@ -27,7 +27,7 @@ ONE PIECE [CAPÍTULO 914](/Rock_Animes/onePiece/Capitulo914.html).
 ![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)
 
 
-ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
+ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915/Capitulo915.html).
 
 
 
