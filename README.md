@@ -2,21 +2,21 @@
 
 ### Capítulo 913: Tsuru Retribui o Favor
 
-![GitHub Logo](/sample_pages/01_x.jpg)
+![GitHub Logo](/Rock_Animes/01_x.jpg)
 
 
 
-NOVO MANGÁ [CAPÍTULO 913](/sample_pages/Capitulo913.html).
+NOVO MANGÁ [CAPÍTULO 913](/Rock_Animes/Capitulo913.html).
 
 
 
 
 ### TESTE VIDEO
-TESTE VIDEO [TESTE VIDEO](/sample_pages/video.html).
+TESTE VIDEO [TESTE VIDEO](/Rock_Animes/video.html).
 
 ### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NiltonRock/sample_pages/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NiltonRock/Rock_Animes/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 
 ### Support or Contact
