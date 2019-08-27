@@ -5,7 +5,7 @@
 ![GitHub Logo](/Rock_Animes/01_x.jpg)
 
 
-ONE PIECE [CAPÍTULO 913](/Rock_Animes/Capitulo913.html).
+ONE PIECE [CAPÍTULO 913](/Rock_Animes/onePiece/Capitulo913.html).
 
 
 ### Capítulo 914 Okobore, a Cidade das Sobras
