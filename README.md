@@ -11,14 +11,14 @@ ONE PIECE [CAPÍTULO 913](/Rock_Animes/onePiece/Capitulo913.html).
 ### Capítulo 914 Okobore, a Cidade das Sobras
 
 
-![GitHub Logo](Rock_Animes/onePiece/Capitulo914/01_x.jpg)
+![GitHub Logo](/Rock_Animes/onePiece/Capitulo914/01_x.jpg)
 
 
 ONE PIECE [CAPÍTULO 914](/Rock_Animes/onePiece/Capitulo914.html).
 
 
 
-##----------------------------------------------------------------------------------------------------
+### ----------------------------------------------------------------------------------------------------
 
 
 ### Monster Musume no Iru Nichijou1
