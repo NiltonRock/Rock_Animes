@@ -30,9 +30,7 @@ ONE PIECE [CAPÍTULO 914](/Rock_Animes/onePiece/Capitulo914.html).
 ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
 
 
-
 ### -------------------------------------------------------------------------------------------------------------------------
-
 
 
 ### Monster Musume no Iru Nichijou1
@@ -41,7 +39,4 @@ ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
 
 [MONSTER MUSUME](/Rock_Animes/video.html).
 
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### -------------------------------------------------------------------------------------------------------------------------
