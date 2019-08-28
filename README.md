@@ -45,9 +45,9 @@ ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
 
 ### BIBLIOTECA NILTON ROCK
 
-![GitHub Logo](/Rock_Animes/livros/livro.md).
+![GitHub Logo](/Rock_Animes/livros/Camoes-Os-Lusiadas.JPG).
 
 [Livros](/Rock_Animes/Livros.html).
-ONE PIECE [CAPÍTULO 915](/Rock_Animes/livros/livro.md).
+
 
 ### -------------------------------------------------------------------------------------------------------------------------
