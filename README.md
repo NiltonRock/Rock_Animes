@@ -46,7 +46,7 @@ ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
 ### BIBLIOTECA NILTON ROCK
 
 ![GitHub Logo](/Rock_Animes/livros/A-Culpa--das-Estrelas.jpeg).
-[A Culpa é das Estrelas](/Rock_Animes/Livro.html).
+[A Culpa é das Estrelas](/Rock_Animes/livro.html).
 
 [Livros](/Rock_Animes/Livros.html).
 
