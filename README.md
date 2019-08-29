@@ -45,7 +45,7 @@ ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
 
 ### BIBLIOTECA NILTON ROCK
 
-![GitHub Logo](/Rock_Animes/livro.jpeg).
+![GitHub Logo](/Rock_Animes/livro.jpg).
 
 
 [Livros](/Rock_Animes/Livros.html).
