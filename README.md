@@ -1,5 +1,9 @@
 ## BEM VINDOS BOCOS
 
+### CURSOS
+
+[JAVASCRIPT](/Rock_Animes/javascript.html).
+
 ### Capítulo 913: Tsuru Retribui o Favor
 
 ![GitHub Logo](/Rock_Animes/01_x.jpg)
