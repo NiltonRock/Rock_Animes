@@ -2,6 +2,10 @@
 
 ### CURSOS
 
+
+[CURSO DE INGLES](/Rock_Animes/Curso/Ingles/curso_ingles.html).
+
+
 [JAVASCRIPT](/Rock_Animes/javascript.html).
 
 ### Capítulo 913: Tsuru Retribui o Favor
