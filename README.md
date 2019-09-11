@@ -1,9 +1,8 @@
 ## BEM VINDOS BÓCOS !!!
 
 ### VIDEOS
-![GitHub Logo](/Rock_Animes/GuitarraCover/guitarra.jpg)
 
-[ROCK GIRLS](/Rock_Animes/GuitarraCover/covers.html).
+ROCK GIRLS[![GitHub Logo](/Rock_Animes/GuitarraCover/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
 
 ### CURSOS
 
@@ -15,20 +14,14 @@
 
 ### Capítulo 913: Tsuru Retribui o Favor
 
-![GitHub Logo](/Rock_Animes/01_x.jpg)
-
-
-ONE PIECE [CAPÍTULO 913](/Rock_Animes/onePiece/Capitulo913.html).
+CAPÍTULO 913 [![GitHub Logo](/Rock_Animes/01_x.jpg)](/Rock_Animes/onePiece/Capitulo913.html).
 
 ### -------------------------------------------------------------------------------------------------------------------------
 
 ### Capítulo 914 Okobore, a Cidade das Sobras
 
 
-
-
-ONE PIECE [![GitHub Logo](/Rock_Animes/onePiece/Capitulo914/01_x.jpg)
-](/Rock_Animes/onePiece/Capitulo914.html).
+Capítulo 914 [![GitHub Logo](/Rock_Animes/onePiece/Capitulo914/01_x.jpg)](/Rock_Animes/onePiece/Capitulo914.html).
 
 
 
@@ -36,11 +29,7 @@ ONE PIECE [![GitHub Logo](/Rock_Animes/onePiece/Capitulo914/01_x.jpg)
 
 ### Capítulo 915 O Distrito de Bakura
 
-
-![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)
-
-
-ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
+Capítulo [![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)](/Rock_Animes/onePiece/Capitulo915.html).
 
 
 ### -------------------------------------------------------------------------------------------------------------------------
@@ -58,10 +47,8 @@ ONE PIECE [CAPÍTULO 915](/Rock_Animes/onePiece/Capitulo915.html).
 
 ### BIBLIOTECA NILTON ROCK
 
-![GitHub Logo](/Rock_Animes/livro.jpg).
 
-
-[Livros](/Rock_Animes/Livros.html).
+[![GitHub Logo](/Rock_Animes/livro.jpg).](/Rock_Animes/Livros.html).
 
 
 ### -------------------------------------------------------------------------------------------------------------------------
