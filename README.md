@@ -1,7 +1,7 @@
 ## BEM VINDOS BÓCOS !!!
 
 ### VIDEOS
-![GitHub Logo](/Rock_Animes/onePiece/guitarra.jpg)
+![GitHub Logo](/Rock_Animes/GuitarraCover/guitarra.jpg.jpg)
 
 [ROCK GIRLS](/Rock_Animes/GuitarraCover/covers.html).
 
