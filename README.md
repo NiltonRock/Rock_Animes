@@ -2,7 +2,8 @@
 
 ### VIDEOS
 
-ROCK GIRLS[![GitHub Logo](/Rock_Animes/GuitarraCover/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
+ROCK GIRLS
+[![GitHub Logo](/Rock_Animes/GuitarraCover/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
 
 ### CURSOS
 
