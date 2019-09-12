@@ -13,7 +13,7 @@ ROCK GIRLS
 
 Música cover com uma guitarrista sensacional!!!
 
-###Ela é muito boa!
+### Ela é muito boa!
 
 
 [![GitHub Logo](/Rock_Animes/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
