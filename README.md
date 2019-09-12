@@ -28,11 +28,13 @@ Vamos estudar galera !!!!!!
 [![GitHub Logo](/Rock_Animes/Curso/Ingles/cursoEnglish.jpg)](/Rock_Animes/Curso/Ingles/curso_ingles.html).
 
 ### CURSO DE JAVASCRIPT EM CONSTRUÇÃO...
+
 [![GitHub Logo](/Rock_Animes/javascript.jpg)](/Rock_Animes/javascript.html).
 
 # MANGA
 
 ### Vamos ler um pouco de mangar, caso não goste não se preocupe la embaixo tem um monte de livros, ate muita variedade bocós.
+
 [![GitHub Logo](/Rock_Animes/onepiece.jpg)](/Rock_Animes/onePiece/onePiece.html).
 
 ### Capítulo 913: Tsuru Retribui o Favor
