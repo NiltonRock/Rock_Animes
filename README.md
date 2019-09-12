@@ -5,7 +5,7 @@
 
 VIDEOS ENGRAÇADOS
 
-Para que curte dar aquele risada da desgraça dos outros
+Para que curte dar aquele risada da desgraça alheia
 [![GitHub Logo](/Rock_Animes/tentenaorir.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
 
 
@@ -56,7 +56,7 @@ Anime teste, em breve mais animes para meus queridos bocós.
 
 [![GitHub Logo](/Rock_Animes/Monster-Musume-no-Iru-Nichijou.jpg)](/Rock_Animes/video.html).
 
-
+# LIVROS
 ### BIBLIOTECA NILTON ROCK
 
 
