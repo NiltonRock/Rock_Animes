@@ -4,21 +4,27 @@
 # VIDEOS
 
 VIDEOS ENGRAÇADOS
+
+Para que curte dar aquele risada da desgraça dos outros
 [![GitHub Logo](/Rock_Animes/tentenaorir.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
 
 
 ROCK GIRLS
+
+Música cover com uma guitarrista sensacional!!!
+confira
 [![GitHub Logo](/Rock_Animes/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
 
-### CURSOS
+# CURSOS
 
+Vamos estudar galera !!!!!!
 
 [CURSO DE INGLES](/Rock_Animes/Curso/Ingles/curso_ingles.html).
 
 
 [JAVASCRIPT](/Rock_Animes/javascript.html).
 
-#MANGA
+# MANGA
 
 [![GitHub Logo](/Rock_Animes/onepiece.jpg)](/Rock_Animes/onePiece/onePiece.html).
 
