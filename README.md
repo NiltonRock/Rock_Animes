@@ -1,6 +1,11 @@
 ## BEM VINDOS BÓCOS !!!
 
+
 ### VIDEOS
+
+VIDEOS ENGRAÇADOS
+[![GitHub Logo](/Rock_Animes/tentenaori.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
+
 
 ROCK GIRLS
 [![GitHub Logo](/Rock_Animes/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
