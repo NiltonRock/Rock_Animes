@@ -4,7 +4,7 @@
 ### VIDEOS
 
 VIDEOS ENGRAÇADOS
-[![GitHub Logo](/Rock_Animes/tentenaori.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
+[![GitHub Logo](/Rock_Animes/tentenaorir.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
 
 
 ROCK GIRLS
