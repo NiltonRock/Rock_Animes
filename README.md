@@ -25,10 +25,10 @@ Vamos estudar galera !!!!!!
 ### CURSO BÁSICO PARA INICIANTES NA LINGUA INGLESA.
 ### GOOD LUCK!!!!
 
-[![GitHub Logo](Rock_Animes/Curso/Ingles/cursoEnglish.jpg)](/Rock_Animes/Curso/Ingles/curso_ingles.html).
+[![GitHub Logo](/Rock_Animes/Curso/Ingles/cursoEnglish.jpg)](/Rock_Animes/Curso/Ingles/curso_ingles.html).
 
 ### CURSO DE JAVASCRIPT EM CONSTRUÇÃO...
-[![GitHub Logo](Rock_Animes/javascript.jpg)](/Rock_Animes/javascript.html).
+[![GitHub Logo](/Rock_Animes/javascript.jpg)](/Rock_Animes/javascript.html).
 
 # MANGA
 
