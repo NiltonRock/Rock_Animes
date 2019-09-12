@@ -22,10 +22,13 @@ Música cover com uma guitarrista sensacional!!!
 
 Vamos estudar galera !!!!!!
 
-[CURSO DE INGLES](/Rock_Animes/Curso/Ingles/curso_ingles.html).
+### CURSO BÁSICO PARA INICIANTES NA LINGUA INGLESA.
+### GOOD LUCK!!!!
 
+[![GitHub Logo](Rock_Animes/Curso/Ingles/cursoEnglish.jpg)](/Rock_Animes/Curso/Ingles/curso_ingles.html).
 
-[JAVASCRIPT](/Rock_Animes/javascript.html).
+### CURSO DE JAVASCRIPT EM CONSTRUÇÃO...
+[![GitHub Logo](Rock_Animes/javascript.jpg)](/Rock_Animes/javascript.html).
 
 # MANGA
 
