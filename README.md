@@ -27,6 +27,10 @@ Vamos estudar galera !!!!!!
 
 [![GitHub Logo](/Rock_Animes/Curso/Ingles/cursoEnglish.jpg)](/Rock_Animes/Curso/Ingles/curso_ingles.html).
 
+### CURSO DE PYTHON
+[![GitHub Logo](/Rock_Animes/Curso/Python/python.jpg)](/Rock_Animes/Curso/Python/python.html).
+
+
 ### CURSO DE JAVASCRIPT EM CONSTRUÇÃO...
 
 [![GitHub Logo](/Rock_Animes/javascript.jpg)](/Rock_Animes/javascript.html).
