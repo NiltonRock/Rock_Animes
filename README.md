@@ -1,5 +1,8 @@
 ## BEM VINDOS BÓCOS !!!
 
+Escolha sua camiseta
+[![GitHub Logo](/Rock_Animes/loja.jpg)](/Rock_Animes/loja/camisetas.html).
+
 
 # VIDEOS
 
