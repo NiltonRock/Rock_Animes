@@ -1,6 +1,8 @@
 ## BEM VINDOS BÓCOS !!!
 
 Escolha sua camiseta
+
+### Qualquer camiseta R$ 40,00
 [![GitHub Logo](/Rock_Animes/loja.jpg)](/Rock_Animes/loja/camisetas.html).
 
 
