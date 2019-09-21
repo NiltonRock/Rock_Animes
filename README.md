@@ -77,5 +77,15 @@ Anime teste, em breve mais animes para meus queridos bocós.
 [![GitHub Logo](/Rock_Animes/livro.jpg).](/Rock_Animes/Livros.html).
 
 
+*.ctis.com.br;10.13.0.17;*atendimento.sisbr.coop.br;172.16.2.13;172.16.0.67;*.sondait.com;*.vpnssl.endesa.es*
+webgte.sondait.com.br
+9090
+
+
+
+
+
+
+
 
 
