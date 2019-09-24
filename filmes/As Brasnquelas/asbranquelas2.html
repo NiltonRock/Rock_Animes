@@ -1,36 +1,28 @@
 <html>
 <head>
-<title>Teste Filme</title>
+    <title>Teste Filme</title>
     <meta charset="utf-8">
-<script>
-var myvid = document.getElementById('myvideo');
-var myvids = [
-  "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4", 
-  "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4",
-    "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4"
-  ];
-var activeVideo = 0;
+    <script>
+        var myvid = document.getElementById('myvideo');
+        var myvids = [
+            "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4", 
+            "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4",
+            "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4"
+            ];
+        var activeVideo = 0;
 
-myvid.addEventListener('ended', function(e) {
-  // update the new active video index
-  activeVideo = (++activeVideo) % myvids.length;
-
-  // update the video source and play
-  myvid.src = myvids[activeVideo];
-  myvid.play();
-});
+        myvid.addEventListener('ended', function(e) {
+        activeVideo = (++activeVideo) % myvids.length;
+        myvid.src = myvids[activeVideo];
+        myvid.play();
+        });
     </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 </head>
 <body>            
-                    
-          <h1>As Branquelas</h1>       
-          
-
-          
-          <video src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" id="myvideo" width="320" height="240" controls style="background:black">
-</video>
-          
- </body>
- </html>
+    <h1>As Branquelas</h1>       
+    <video src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" id="myvideo" width="320" height="240" controls style="background:black">
+    <video src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4" id="myvideo" width="320" height="240" controls style="background:black">
+    </video>
+</body>
+</html>
