@@ -61,6 +61,23 @@ myvid.addEventListener('ended', function(e) {
       <tr align="center">
       <td align="center">
           <input type='button' value='Voltar' onclick='history.go(-1)' /> 
+          <script>
+              
+              function play(first, second){
+    var video = document.getElementById("media")
+
+    video.setAttribute("/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4", first)
+    video.load()
+    video.play()
+
+    setTimeout(function(){
+        video.setAttribute("/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4", second)
+        video.load()
+        video.play()
+    }, 2000)
+}
+              
+          </script>
 
 
 
