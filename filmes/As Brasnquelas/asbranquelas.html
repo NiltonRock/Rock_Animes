@@ -1,24 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <script>
-        var myvid = document.getElementById('myvideo');
 
-myvid.addEventListener('ended', function(e) {
-  // get the active source and the next video source.
-  // I set it so if there's no next, it loops to the first one
-  var activesource = document.querySelector("#myvideo source.active");
-  var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
-  
-  // deactivate current source, and activate next one
-  activesource.className = "";
-  nextsource.className = "active";
-  
-  // update the video source and play
-  myvid.src = nextsource.src;
-  myvid.play();
-});
-    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/Rock_Animes/assets/css/style.css?v=86dc7169522846c7b43548f3a508c88bdf0a4e48" media="screen" type="text/css">
@@ -61,7 +44,31 @@ myvid.addEventListener('ended', function(e) {
       <tr align="center">
       <td align="center">
           <input type='button' value='Voltar' onclick='history.go(-1)' /> 
-          <h1>As Branquelas</h1>
+          
+          <h1>As Branquelas</h1>]
+          
+          
+              <script>
+var myvid = document.getElementById('myvideo');
+var myvids = [
+  "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4", 
+  "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4",
+    "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4"
+  ];
+var activeVideo = 0;
+
+myvid.addEventListener('ended', function(e) {
+  // update the new active video index
+  activeVideo = (++activeVideo) % myvids.length;
+
+  // update the video source and play
+  myvid.src = myvids[activeVideo];
+  myvid.play();
+});
+    </script>
+          
+          <video src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" id="myvideo" width="320" height="240" controls style="background:black">
+</video>
           
           <video id="myvideo" controls="" poster="asbranquelas.jpg" name="media" width="320" height="240" controls style="background:black">
 <source src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" type="video/mp4">
