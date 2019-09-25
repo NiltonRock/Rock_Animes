@@ -76,7 +76,7 @@ Capítulo [![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)](/Rock_Ani
 
 
 # ANIMES
-> [!IMPORTANT]
+>[!WARNING]
 >Anime teste, em breve mais animes para meus queridos bocós.
 
 ### Monster Musume no Iru Nichijou1
@@ -86,5 +86,7 @@ Capítulo [![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)](/Rock_Ani
 
 # LIVROS
 ### BIBLIOTECA NILTON ROCK
+> [!IMPORTANT]
+>leia um livro
 
 [![GitHub Logo](/Rock_Animes/livro.jpg).](/Rock_Animes/Livros.html).
