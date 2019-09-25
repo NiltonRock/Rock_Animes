@@ -10,94 +10,209 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>BEM VINDOS BÓCOS !!! | Rock_Animes</title>
-<meta name="generator" content="Jekyll v3.8.5">
-<meta property="og:title" content="BEM VINDOS BÓCOS !!!">
-<meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://niltonrock.github.io/Rock_Animes/">
-<meta property="og:url" content="https://niltonrock.github.io/Rock_Animes/">
-<meta property="og:site_name" content="Rock_Animes">
-<script type="application/ld+json">
-{"headline":"BEM VINDOS BÓCOS !!!","@type":"WebSite","url":"https://niltonrock.github.io/Rock_Animes/","name":"Rock_Animes","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-
+	<!-- Begin Jekyll SEO tag v2.5.0 -->
+	<title>BEM VINDOS BÓCOS !!! | Rock_Animes</title>
+	<meta name="generator" content="Jekyll v3.8.5">
+	<meta property="og:title" content="BEM VINDOS BÓCOS !!!">
+	<meta property="og:locale" content="en_US">
+	<link rel="canonical" href="https://niltonrock.github.io/Rock_Animes/">
+	<meta property="og:url" content="https://niltonrock.github.io/Rock_Animes/">
+	<meta property="og:site_name" content="Rock_Animes">
+	<script type="application/ld+json">
+	{"headline":"BEM VINDOS BÓCOS !!!","@type":"WebSite","url":"https://niltonrock.github.io/Rock_Animes/","name":"Rock_Animes","@context":"http://schema.org"}</script>
+	<!-- End Jekyll SEO tag -->
+      
+       <style type="text/css">
+		body {
+  			margin: 30px;
+  			padding: 0;
+  			background: #ddd;
+  			font-family: Arial, Helvetica, sans-serif;
+  		}
+  		.title {
+  			width: 100%;
+  			max-width: 854px;
+  			margin: 0 auto;
+  		}
+  		.caption {
+  			width: 100%;
+  			max-width: 854px;
+  			margin: 0 auto;
+  			padding: 20px 0;
+  		}
+  		.vid-main-wrapper {
+  			width: 100%;
+  			max-width: 1100px;
+  			min-width: 440px;
+  			background: #fff;
+  			margin: 0 auto;
+  		}
+  		/*  VIDEO PLAYER CONTAINER
+ 		############################### */
+  		.vid-container {
+		    	position: relative;
+		    	padding-bottom: 52%;
+		    	padding-top: 30px; 
+		    	height: 0; 
+       			width:70%;
+        		float:left;
+		}
+		 
+		.vid-container iframe,
+		.vid-container object,
+		.vid-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    min-height: 360px;
+		}
+		/*  VIDEOS PLAYLIST 
+ 		############################### */
+		.vid-list-container {
+			width: 30%;
+      			height:360px;
+			overflow: hidden;
+      			float:right;
+		}
+    		.vid-list-container:hover, .vid-list-container:focus {
+      		 overflow-y: auto;
+    		 }
+		ol#vid-list {
+      		margin:0;
+      		padding:0;
+      		background: #222;
+		}
+    		ol#vid-list li {
+		  	list-style: none;
+    		}
+    		ol#vid-list li a {
+      		text-decoration: none;
+      		background-color: #222;
+      		height:55px;
+      		display:block;
+      		padding:10px;
+    		}
+    		ol#vid-list li a:hover {
+      		background-color:#666666
+    		}
+		.vid-thumb {
+      		float:left;
+			margin-right: 8px;
+		}
+    		.active-vid { 
+      		background:#3A3A3A;
+    		}
+		#vid-list .desc {
+			color: #CACACA;
+			font-size: 13px;
+			margin-top:5px;
+		}
+		@media (max-width: 624px) {
+			body {
+				margin: 15px;
+			}
+			.caption {
+				margin-top: 40px;
+			}
+			.vid-list-container {
+				padding-bottom: 20px;
+			}
+		}
+    	</style>
+    	<script src="js/Rock_Animes/filmes/testevideo.js"></script>
 </head>
 <body>
     
-  <header>
-      <div class="inner">
+  	<header>
+      	<div class="inner">
         <a href="https://niltonrock.github.io/Rock_Animes/">
-        <h1>Rock_Animes</h1>
+        	<h1>Rock_Animes</h1>
         </a>
         <h2></h2>
         <a href="https://github.com/NiltonRock/Rock_Animes" class="button"><small>View project on</small> GitHub</a>
+       	</div>
+   	</header>
+   	<br>
+	<br>
+   	<section class="main-content">           
+  
+    
+    	<div class="vid-main-wrapper clearfix">
+	<br>
+  		    <!-- THE YOUTUBE PLAYER -->
+      	<div class="vid-container">
+          	<iframe id="vid_frame" src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 01].mp4" frameborder="0" width="560" height="315"></iframe>
+      	</div>
+
+      	<!-- THE PLAYLIST -->
+      	<div class="vid-list-container">
+            <ol id="vid-list">
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 01].mp4'">
+                <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                <div class="desc">Introdução parte 01</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 02].mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Introdução parte 2</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 03].mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Introdução parte 03</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 04].mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Introdução parte 04</div>
+                </a>
+              </li>
+                  <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 05].mp4'">
+                <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                <div class="desc">Introdução parte 05</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [extra 01 Lucas].mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Extra 01</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 01].mp4" type="video/mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Aula 01</div>
+                </a>
+              </li>
+                <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 01 interlúdio].mp4'">
+                <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                <div class="desc">Aula 01 interlúdio</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 02].mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Aula 02</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 03].mp4'">
+                  <span class="vid-thumb"><img width=72 src="python.jpg" /></span>
+                  <div class="desc">Aula 03</div>
+                </a>
+              </li>
+            </ul>
        </div>
-   </header>
-   
-   <section class="main-content">       
-<table>
-<tr align="center">
-<td align="center">
-<h2>intro 01</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 01].mp4" type="video/mp4">
-</video></td>
-<td align="center">
-<h2>intro 02</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 02].mp4" type="video/mp4">
-</video></td>
-    <td align="center">
-<tr align="center">
-<td align="center">
-<h2>intro 03</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 03].mp4" type="video/mp4">
-</video></td>
-<td align="center">
-<h2>intro 04</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 04].mp4" type="video/mp4">
-</video>
-</td>
-<tr align="center">
-<td align="center">
-<h2>intro 05</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [intro 05].mp4" type="video/mp4">
-</video></td>
-<td align="center">
-<h2>extra 01 Lucas</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [extra 01 Lucas].mp4" type="video/mp4">
-</video>
-</td>
-<tr align="center">
-<td align="center">
-<h2>aula 01</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 01].mp4" type="video/mp4">
-</video></td>
-<td align="center">
-<h2>aula 01 interlúdio</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 01 interlúdio].mp4" type="video/mp4">
-</video>
-</td><tr align="center">
-<td align="center">
-<h2>aula 02</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 02].mp4" type="video/mp4">
-</video></td>
-<td align="center">
-<h2>aula 03</h2>
-<video controls="" name="media" poster="python.jpg">
-<source src="/Rock_Animes/Curso/Python/Tutorial de TDD com Python [aula 03].mp4" type="video/mp4">
-</video>
-</td>
-</table>
+  	
+</div>
+
 </section>
 </body>
 </html>
