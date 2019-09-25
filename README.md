@@ -1,33 +1,36 @@
 ## BEM VINDOS BÓCOS !!!
 
+Aqui você encontra um contéudo diversificado, Filmes, animes, livros, cursos e uma loja de camisetas de excelente qualidade.
+Aproveite o site esta em construção e cada sugestão pode melhorar cada vez mais a qualidade e o conteudo.
+
+
+
 ### FILMES
+
+Em breve mais filmes para voces bocos, para começar fiquem com As Branquelas, Filme muito bom e vale a pena ver denovo. 
 [![GitHub Logo](/Rock_Animes/filmes.png)](/Rock_Animes/filmes/As Brasnquelas/asbranquelas.html).
 
 
-
-
-
-
-
-
 ### Qualquer camiseta R$ 40,00
-Escolha sua camiseta
+Escolha sua camiseta 
+
 [![GitHub Logo](/Rock_Animes/loja.jpg)](/Rock_Animes/loja/camisetas.html).
 
 
 # VIDEOS
 
+
 VIDEOS ENGRAÇADOS
 
-Para que curte dar aquele risada da desgraça alheia
+Para que curte dar aquele risada da vergonha alheia
 [![GitHub Logo](/Rock_Animes/tentenaorir.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
 
 
+
+### Ela é muito boa!
 ROCK GIRLS
 
 Música cover com uma guitarrista sensacional!!!
-
-### Ela é muito boa!
 
 
 [![GitHub Logo](/Rock_Animes/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
@@ -35,6 +38,8 @@ Música cover com uma guitarrista sensacional!!!
 # CURSOS
 
 Vamos estudar galera !!!!!!
+
+Em breve mais cursos, por enquanto fiquem com Python e um curso muito bom de Ingles. 
 
 ### CURSO BÁSICO PARA INICIANTES NA LINGUA INGLESA.
 ### GOOD LUCK!!!!
