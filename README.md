@@ -1,13 +1,13 @@
 ## BEM VINDOS BÓCOS !!!
-
-Aqui você encontra um contéudo diversificado, Filmes, animes, livros, cursos e uma loja de camisetas de excelente qualidade.
-Aproveite o site esta em construção e cada sugestão pode melhorar cada vez mais a qualidade e o conteudo.
+> [!NOTE]
+>Aqui você encontra um contéudo diversificado, Filmes, animes, livros, cursos e uma loja de camisetas de excelente qualidade.
+>Aproveite o site esta em construção e cada sugestão pode melhorar cada vez mais a qualidade e o conteudo.
 
 
 
 ### FILMES
-
-Em breve mais filmes para voces bocos, para começar fiquem com As Branquelas, Filme muito bom e vale a pena ver denovo. 
+> [!WARNING]
+>Em breve mais filmes para voces bocos, para começar fiquem com As Branquelas, Filme muito bom e vale a pena ver denovo. 
 [![GitHub Logo](/Rock_Animes/filmes.png)](/Rock_Animes/filmes/As Brasnquelas/asbranquelas.html).
 
 
@@ -21,8 +21,8 @@ Escolha sua camiseta
 
 
 VIDEOS ENGRAÇADOS
-
-Para que curte dar aquele risada da vergonha alheia
+> [!TIP]
+>Para que curte dar aquele risada da vergonha alheia
 [![GitHub Logo](/Rock_Animes/tentenaorir.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
 
 
@@ -76,8 +76,8 @@ Capítulo [![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)](/Rock_Ani
 
 
 # ANIMES
-
-Anime teste, em breve mais animes para meus queridos bocós.
+> [!IMPORTANT]
+>Anime teste, em breve mais animes para meus queridos bocós.
 
 ### Monster Musume no Iru Nichijou1
 
