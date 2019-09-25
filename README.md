@@ -87,16 +87,4 @@ Anime teste, em breve mais animes para meus queridos bocós.
 # LIVROS
 ### BIBLIOTECA NILTON ROCK
 
-
 [![GitHub Logo](/Rock_Animes/livro.jpg).](/Rock_Animes/Livros.html).
-
-
-
-
-
-
-
-
-
-
-
