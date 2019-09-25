@@ -1,237 +1,73 @@
 <html>
 <head>
-    <meta charset="utf-8">
-<script>
-var myvid = document.getElementById('myvideo');
-var myvids = [
-  "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4", 
-  "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4",
-    "/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4"
-  ];
-var activeVideo = 0;
-
-myvid.addEventListener('ended', function(e) {
-  // update the new active video index
-  activeVideo = (++activeVideo) % myvids.length;
-
-  // update the video source and play
-  myvid.src = myvids[activeVideo];
-  myvid.play();
-});
-    </script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/Rock_Animes/assets/css/style.css?v=86dc7169522846c7b43548f3a508c88bdf0a4e48" media="screen" type="text/css">
-    <link rel="stylesheet" href="/Rock_Animes/assets/css/print.css" media="print" type="text/css">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>BEM VINDOS BÓCOS !!! | Rock_Animes</title>
-<meta name="generator" content="Jekyll v3.8.5">
-<meta property="og:title" content="BEM VINDOS BÓCOS !!!">
-<meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://niltonrock.github.io/Rock_Animes/">
-<meta property="og:url" content="https://niltonrock.github.io/Rock_Animes/">
-<meta property="og:site_name" content="Rock_Animes">
-<script type="application/ld+json">
-{"headline":"BEM VINDOS BÓCOS !!!","@type":"WebSite","url":"https://niltonrock.github.io/Rock_Animes/","name":"Rock_Animes","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-
-   
-<style type="text/css">
-body {
-  			margin: 30px;
-  			padding: 0;
-  			background: #ddd;
-  			font-family: Arial, Helvetica, sans-serif;
-  		}
-  		.title {
-  			width: 100%;
-  			max-width: 854px;
-  			margin: 0 auto;
-  		}
-  		.caption {
-  			width: 100%;
-  			max-width: 854px;
-  			margin: 0 auto;
-  			padding: 20px 0;
-  		}
-  		.vid-main-wrapper {
-  			width: 100%;
-  			max-width: 1100px;
-  			min-width: 440px;
-  			background: #fff;
-  			margin: 0 auto;
-  		}
-  		/*  VIDEO PLAYER CONTAINER
- 		############################### */
-  		.vid-container {
-		    position: relative;
-		    padding-bottom: 52%;
-		    padding-top: 30px; 
-		    height: 0; 
-        width:70%;
-        float:left;
-		}
-		 
-		.vid-container iframe,
-		.vid-container object,
-		.vid-container embed {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    min-height: 360px;
-		}
-		/*  VIDEOS PLAYLIST 
- 		############################### */
-		.vid-list-container {
-			width: 30%;
-      height:360px;
-			overflow: hidden;
-      float:right;
-		}
-    .vid-list-container:hover, .vid-list-container:focus {
-       overflow-y: auto;
-     }
-		ol#vid-list {
-      margin:0;
-      padding:0;
-      background: #222;
-		}
-    ol#vid-list li {
-		  list-style: none;
-    }
-    ol#vid-list li a {
-      text-decoration: none;
-      background-color: #222;
-      height:55px;
-      display:block;
-      padding:10px;
-    }
-    ol#vid-list li a:hover {
-      background-color:#666666
-    }
-		.vid-thumb {
-      float:left;
-			margin-right: 8px;
-		}
-    .active-vid { 
-      background:#3A3A3A;
-    }
-		#vid-list .desc {
-			color: #CACACA;
-			font-size: 13px;
-			margin-top:5px;
-		}
-		@media (max-width: 624px) {
-			body {
-				margin: 15px;
-			}
-			.caption {
-				margin-top: 40px;
-			}
-			.vid-list-container {
-				padding-bottom: 20px;
-			}
-		}
-    </style>
-    <script src="js/Rock_Animes/filmes/testevideo.js"></script>
-
+<meta charset="utf8">
+<meta content-type="text/html">
 </head>
-<body>    
-      
-  <header>
-      <div class="inner">
-        <a href="https://niltonrock.github.io/Rock_Animes/">
-        <h1>Rock_Animes</h1>
-        </a>
-        <h2></h2>
-        <a href="https://github.com/NiltonRock/Rock_Animes" class="button"><small>View project on</small> GitHub</a>
-       </div>
-   </header>         
-  
+<body>
     
-    <div class="vid-main-wrapper clearfix">
+    <button onClick="show()"> Mostrar vídeo </button>   
 
-  		    <!-- THE YOUTUBE PLAYER -->
-      <div class="vid-container">
-          <iframe id="vid_frame" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" frameborder="0" width="560" height="315"></iframe>
-      </div>
+    <div id="videoDiv" style="display: none">
 
-      <!-- THE PLAYLIST -->
-      <div class="vid-list-container">
-            <ol id="vid-list">
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.JPG" /></span>
-                  <div class="desc">Cena Inicial - As Branquelas</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.JPG" /></span>
-                  <div class="desc">Se você tem uma amante é melhor me dizer logo</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.JPG" /></span>
-                  <div class="desc">Cena do Aeroporto</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 04.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 04.JPG" /></span>
-                  <div class="desc">O Bichinho Gosta de andar na frente</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 05.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 05.JPG" /></span>
-                  <div class="desc">Acidente das irmãs Wilson</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 06.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 06.JPG" /></span>
-                  <div class="desc">A transformação dos policiais</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 07.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 09.JPG" /></span>
-                  <div class="desc">Segura o meu poodle</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 08.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 08.JPG" /></span>
-                  <div class="desc">Que foi? não tão reconhecendo a gente?</div>
-                </a>
-              </li>
-		<li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 08.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 09.JPG" /></span>
-                  <div class="desc">Que foi? não tão reconhecendo a gente?</div>
-                </a>
-              </li>
-		<li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 08.mp4'">
-                  <span class="vid-thumb"><img width=72 src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 10.JPG" /></span>
-                  <div class="desc">Que foi? não tão reconhecendo a gente?</div>
-                </a>
-              </li>
-              
-            </ul>
-       </div>
+        <video id="video" width="600" height="auto" autoplay controls>
+            <source id="source" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" type="video/mp4">
+		<source id="source" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4" type="video/mp4">
+        </video>
+    </div>
 
-  	
-</div>
 
- </body>
- </html>
+    <script type="text/javascript">
+        function show(){   
+            //para selecionar uma ou mais checkboxes, use querySelectAll
+            //será retornado um nodelist, similar a um array, com todos
+            //os cehckbox que foram selecionados pelo usuario, veja com //console.log(pacotes);
+            //pequena mudanca no nome da variavel
+            let pacotes = document.querySelectorAll('[name="Pacote"]:checked')
+		
+            let source = document.querySelector('#source')
+	    //nesse array vão ser colocados os videos que devem ser tocados
+	    let videos = [];
+
+	    //Nesse trecho você indica quais videos devem ser adicionados ao array
+	    //Como deve ser adicionado mais de um, você não deveria usar if/else if
+            //pacotes[0] é a sua primeira checkbox, pacotes[1] a segunda, pacotes[i] a enesima checkbox
+            if(pacotes[0].value === 'Pacote i')
+            {
+                videos.push('./video1.mp4');
+
+            }
+            if(pacotes[1].value === 'Pacote ii') {
+                videos.push('./video2.mp4');
+            }
+            if(pacotes[2].value === 'Pacote iii') {
+                videos.push('./video3.mp4');
+            }
+
+
+            document.querySelector('#videoDiv').style.display = 'block'
+	
+	    //agora você precisa carregar o primeiro video (se houver)
+	    if(videos.length > 0){
+                let video_indice = 0;
+                let video = document.querySelector('#video');
+                //seta o atributo src do video primeiro video video_indice = 0
+                source.setAttribute('src', videos[video_indice]);              
+	        video.load()
+
+                //nesse ponto você deve usar o evento onended no elemento #video
+	        //que é disparado quando o video termina de rodar
+                video.addEventListener('ended', function(){
+                    video_indice++;
+                    //tocara até o ultimo indice do array videos
+                    if(video_indice < videos.length){
+                        source.setAttribute('src', videos[video_indice]);              
+	                video.load();                        
+                    }
+                });
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
