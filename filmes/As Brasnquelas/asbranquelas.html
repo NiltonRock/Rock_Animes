@@ -4,14 +4,21 @@
 <meta content-type="text/html">
 </head>
 <body>
-    
+    <input type="checkbox" id="pacotei" name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4">
+    <label for="pacotei">CAPSULA</label>
+    <br>
+    <input type="checkbox" id="pacoteii" name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4">
+    <label for="pacoteii">CREME</label>
+    <br>
+    <input type="checkbox" id="pacoteiii" name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4">
+    <label for="pacoteiii">SACHE</label>
+    <br>
     <button onClick="show()"> Mostrar vídeo </button>   
 
     <div id="videoDiv" style="display: none">
 
         <video id="video" width="600" height="auto" autoplay controls>
             <source id="source" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" type="video/mp4">
-		<source id="source" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -24,43 +31,28 @@
             //pequena mudanca no nome da variavel
             let pacotes = document.querySelectorAll('[name="Pacote"]:checked')
 		
-            let source = document.querySelector('#source')
-	    //nesse array vão ser colocados os videos que devem ser tocados
-	    let videos = [];
-
-	    //Nesse trecho você indica quais videos devem ser adicionados ao array
-	    //Como deve ser adicionado mais de um, você não deveria usar if/else if
-            //pacotes[0] é a sua primeira checkbox, pacotes[1] a segunda, pacotes[i] a enesima checkbox
-            if(pacotes[0].value === 'Pacote i')
-            {
-                videos.push('./video1.mp4');
-
-            }
-            if(pacotes[1].value === 'Pacote ii') {
-                videos.push('./video2.mp4');
-            }
-            if(pacotes[2].value === 'Pacote iii') {
-                videos.push('./video3.mp4');
-            }
+            let source = document.querySelector('#source');
 
 
             document.querySelector('#videoDiv').style.display = 'block'
 	
-	    //agora você precisa carregar o primeiro video (se houver)
-	    if(videos.length > 0){
-                let video_indice = 0;
+	    //agora você precisa carregar o primeiro video (se houver) 
+            //a partir do nodelist pacotes
+	    if(pacotes.length > 0){
+                let pacote_indice = 0;
                 let video = document.querySelector('#video');
-                //seta o atributo src do video primeiro video video_indice = 0
-                source.setAttribute('src', videos[video_indice]);              
+                //seta o atributo src do primeiro video 
+                //primeiro indice do nodelist, obtido a partir do atributo value
+                source.setAttribute('src', pacotes[pacote_indice].value);              
 	        video.load()
 
                 //nesse ponto você deve usar o evento onended no elemento #video
 	        //que é disparado quando o video termina de rodar
                 video.addEventListener('ended', function(){
-                    video_indice++;
-                    //tocara até o ultimo indice do array videos
-                    if(video_indice < videos.length){
-                        source.setAttribute('src', videos[video_indice]);              
+                    pacote_indice++;
+                    //tocara até o ultimo indice do array pacotes
+                    if(pacote_indice < pacotes.length){
+                        source.setAttribute('src', pacotes[pacote_indice].value);              
 	                video.load();                        
                     }
                 });
