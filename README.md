@@ -1,18 +1,18 @@
 ## BEM VINDOS BÓCOS !!!
-> [!NOTE]
+
 >Aqui você encontra um contéudo diversificado, Filmes, animes, livros, cursos e uma loja de camisetas de excelente qualidade.
 >Aproveite o site esta em construção e cada sugestão pode melhorar cada vez mais a qualidade e o conteudo.
 
 
 
 ### FILMES
-> [!WARNING]
+
 >Em breve mais filmes para voces bocos, para começar fiquem com As Branquelas, Filme muito bom e vale a pena ver denovo. 
 [![GitHub Logo](/Rock_Animes/filmes.png)](/Rock_Animes/filmes/As Brasnquelas/asbranquelas.html).
 
 
 ### Qualquer camiseta R$ 40,00
-Escolha sua camiseta 
+>Escolha sua camiseta 
 
 [![GitHub Logo](/Rock_Animes/loja.jpg)](/Rock_Animes/loja/camisetas.html).
 
@@ -21,7 +21,7 @@ Escolha sua camiseta
 
 
 VIDEOS ENGRAÇADOS
-> [!TIP]
+
 >Para que curte dar aquele risada da vergonha alheia
 [![GitHub Logo](/Rock_Animes/tentenaorir.jpg)](/Rock_Animes/videosEngracados/tenteNaoRir.html).
 
@@ -30,16 +30,16 @@ VIDEOS ENGRAÇADOS
 ### Ela é muito boa!
 ROCK GIRLS
 
-Música cover com uma guitarrista sensacional!!!
+>Música cover com uma guitarrista sensacional!!!
 
 
 [![GitHub Logo](/Rock_Animes/guitarra.jpg)](/Rock_Animes/GuitarraCover/covers.html).
 
 # CURSOS
 
-Vamos estudar galera !!!!!!
+>Vamos estudar galera !!!!!!
 
-Em breve mais cursos, por enquanto fiquem com Python e um curso muito bom de Ingles. 
+>Em breve mais cursos, por enquanto fiquem com Python e um curso muito bom de Ingles. 
 
 ### CURSO BÁSICO PARA INICIANTES NA LINGUA INGLESA.
 ### GOOD LUCK!!!!
@@ -76,7 +76,7 @@ Capítulo [![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)](/Rock_Ani
 
 
 # ANIMES
->[!WARNING]
+
 >Anime teste, em breve mais animes para meus queridos bocós.
 
 ### Monster Musume no Iru Nichijou1
@@ -86,7 +86,7 @@ Capítulo [![GitHub Logo](/Rock_Animes/onePiece/Capitulo915/01_x.jpg)](/Rock_Ani
 
 # LIVROS
 ### BIBLIOTECA NILTON ROCK
-> [!IMPORTANT]
->leia um livro
+
+##### leia um livro
 
 [![GitHub Logo](/Rock_Animes/livro.jpg).](/Rock_Animes/Livros.html).
