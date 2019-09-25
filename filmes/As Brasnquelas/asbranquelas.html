@@ -27,64 +27,54 @@
 </head>
 <body>    
       
-  <header>
-      <div class="inner">
-        <a href="https://niltonrock.github.io/Rock_Animes/">
-        <h1>Rock_Animes</h1>
-        </a>
-        <h2></h2>
-        <a href="https://github.com/NiltonRock/Rock_Animes" class="button"><small>View project on</small> GitHub</a>
-       </div>
-   </header>
+  	<header>
+      		<div class="inner">
+        	<a href="https://niltonrock.github.io/Rock_Animes/">
+        	<h1>Rock_Animes</h1>
+        	</a>
+        	<h2></h2>
+        	<a href="https://github.com/NiltonRock/Rock_Animes" class="button"><small>View project on</small> GitHub</a>
+       		</div>
+   	</header>
    
-   <section class="main-content">
-
-    	
+   	<section class="main-content">
 	<button onClick="show()">CLIQUE AQUI PARA INICIAR O FILME </button>   
-<div id="instructions">
-    <div id="videoDiv" style="display: none">
-
-        <video id="video" width="600" height="auto" autoplay controls>
-            <source id="source" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" type="video/mp4">
-        </video>
-    </div>
-
-
-    <script type="text/javascript">
-        function show(){   
-            let pacotes = document.querySelectorAll('[name="Pacote"]:checked')		
-            let source = document.querySelector('#source');
+		<div id="instructions">
+    			<div id="videoDiv" style="display: none">
+				<video id="video" width="600" height="auto" controls>
+            			<source id="source" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" type="video/mp4">
+        			</video>
+    			</div>
 
 
-            document.querySelector('#videoDiv').style.display = 'block'
-
-	    if(pacotes.length > 0){
-                let pacote_indice = 0;
-                let video = document.querySelector('#video');
-                source.setAttribute('src', pacotes[pacote_indice].value);              
-	        video.load()
-
-                video.addEventListener('ended', function(){
-                    pacote_indice++;
-                    //tocara até o ultimo indice do array pacotes
-                    if(pacote_indice < pacotes.length){
-                        source.setAttribute('src', pacotes[pacote_indice].value);              
-	                video.load();                        
-                    }
-                });
-            }
-            
-        }
-    </script>
+    		<script type="text/javascript">
+        		function show(){   
+            			let pacotes = document.querySelectorAll('[name="Pacote"]:checked')		
+            			let source = document.querySelector('#source');
+				document.querySelector('#videoDiv').style.display = 'block'
+				if(pacotes.length > 0){
+                			let pacote_indice = 0;
+                			let video = document.querySelector('#video');
+                			source.setAttribute('src', pacotes[pacote_indice].value);              
+	        			video.load()
+					video.addEventListener('ended', function(){
+                    				pacote_indice++;
+		                    		if(pacote_indice < pacotes.length){
+                        				source.setAttribute('src', pacotes[pacote_indice].value);              
+	                				video.load();
+						}
+					});
+				}
+			}
+    		</script>
 	
-	<br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	   <br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br>
+	   	<br><br><br><br><br><br><br><br><br><br><br>
+	   	<br><br><br><br><br><br><br><br><br><br><br>
+	   	<br><br><br><br><br><br><br><br><br><br><br>
+	   	<br><br><br><br><br><br><br><br><br><br><br>
+	   	<br><br><br><br><br><br><br><br><br><br><br>
+	   
 	<input type="checkbox"  checked name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4">
     	<input type="checkbox"  checked name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4">
     	<input type="checkbox"  checked name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4">
@@ -127,32 +117,28 @@
     <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
   </video>
   -->
-	   </div> 
-<style>
-  #instructions { max-width: 640px; text-align: left; margin: 30px auto; }
-  #instructions textarea { width: 100%; height: 100px; }
+		</div> 
+	<style>
+  		#instructions { max-width: 640px; text-align: left; margin: 30px auto; }
+  		#instructions textarea { width: 100%; height: 100px; }
 
-  .video-js .vjs-control-bar { 
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  		.video-js .vjs-control-bar { 
+    			display: -webkit-box;
+    			display: -webkit-flex;
+    			display: -ms-flexbox;
+    			display: flex;
+		}
 
-  body {
-    margin-top: 20px;
-    background: #222;
-    text-align: center; 
-    color: #aaa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: radial-gradient(#333, hsl(200,30%,6%) );
-  }
+  		body {
+    			margin-top: 20px;
+    			background: #222;
+    			text-align: center; 
+    			color: #aaa;
+    			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    			background: radial-gradient(#333, hsl(200,30%,6%) );
+		}
 
-  a, a:hover, a:visited { color: #76DAFF; }
-</style>
-
-	   
-	   
-	   
-	   </body>
+  		a, a:hover, a:visited { color: #76DAFF; }
+		</style>
+</body>
 </html>
