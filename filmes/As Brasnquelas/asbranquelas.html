@@ -47,33 +47,30 @@
     			</div>
 
 
-    		<script type="text/javascript">
-        		function show(){   
-            			let pacotes = document.querySelectorAll('[name="Pacote"]:checked')		
-            			let source = document.querySelector('#source');
-				document.querySelector('#videoDiv').style.display = 'block'
-				if(pacotes.length > 0){
-                			let pacote_indice = 0;
-                			let video = document.querySelector('#video');
-                			source.setAttribute('src', pacotes[pacote_indice].value);              
-	        			video.load()
-					video.addEventListener('ended', function(){
-                    				pacote_indice++;
-		                    		if(pacote_indice < pacotes.length){
-                        				source.setAttribute('src', pacotes[pacote_indice].value);              
-	                				video.load();
-						}
-					});
-				}
+    	<script type="text/javascript">
+        	function show(){   
+            		let pacotes = document.querySelectorAll('[name="Pacote"]:checked')		
+            		let source = document.querySelector('#source');
+			document.querySelector('#videoDiv').style.display = 'block'
+			if(pacotes.length > 0){
+                		let pacote_indice = 0;
+                		let video = document.querySelector('#video');
+                		source.setAttribute('src', pacotes[pacote_indice].value);              
+	        		video.load()
+				video.addEventListener('ended', function(){
+                    			pacote_indice++;
+		                    	if(pacote_indice < pacotes.length){
+                        			source.setAttribute('src', pacotes[pacote_indice].value);              
+	                			video.load();
+					}
+				});
 			}
-    		</script>
-	
-		<br><br><br><br><br><br><br><br><br><br><br>
-	   	<br><br><br><br><br><br><br><br><br><br><br>
-	   	<br><br><br><br><br><br><br><br><br><br><br>
-	   	<br><br><br><br><br><br><br><br><br><br><br>
-	   	<br><br><br><br><br><br><br><br><br><br><br>
-	   	<br><br><br><br><br><br><br><br><br><br><br>
+		}
+    	</script>
+	<img src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas.jpg" alt="">
+	<h1>Atenção !!!</h1>
+	<p> O filme esta completo, porem como foi picotado não vai mostrar o tempo correto.</p>
+
 	   
 	<input type="checkbox"  checked name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4">
     	<input type="checkbox"  checked name="Pacote" value="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4">
