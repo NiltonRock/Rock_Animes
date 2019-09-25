@@ -70,29 +70,18 @@
 
     <script type="text/javascript">
         function show(){   
-            //para selecionar uma ou mais checkboxes, use querySelectAll
-            //será retornado um nodelist, similar a um array, com todos
-            //os cehckbox que foram selecionados pelo usuario, veja com //console.log(pacotes);
-            //pequena mudanca no nome da variavel
-            let pacotes = document.querySelectorAll('[name="Pacote"]:checked')
-		
+            let pacotes = document.querySelectorAll('[name="Pacote"]:checked')		
             let source = document.querySelector('#source');
 
 
             document.querySelector('#videoDiv').style.display = 'block'
-	
-	    //agora você precisa carregar o primeiro video (se houver) 
-            //a partir do nodelist pacotes
+
 	    if(pacotes.length > 0){
                 let pacote_indice = 0;
                 let video = document.querySelector('#video');
-                //seta o atributo src do primeiro video 
-                //primeiro indice do nodelist, obtido a partir do atributo value
                 source.setAttribute('src', pacotes[pacote_indice].value);              
 	        video.load()
 
-                //nesse ponto você deve usar o evento onended no elemento #video
-	        //que é disparado quando o video termina de rodar
                 video.addEventListener('ended', function(){
                     pacote_indice++;
                     //tocara até o ultimo indice do array pacotes
@@ -160,8 +149,7 @@
 <style>
   #instructions { max-width: 640px; text-align: left; margin: 30px auto; }
   #instructions textarea { width: 100%; height: 100px; }
-  
-  /* Show the controls (hidden at the start by default) */
+
   .video-js .vjs-control-bar { 
     display: -webkit-box;
     display: -webkit-flex;
@@ -169,7 +157,6 @@
     display: flex;
   }
 
-  /* Make the demo a little prettier */
   body {
     margin-top: 20px;
     background: #222;
