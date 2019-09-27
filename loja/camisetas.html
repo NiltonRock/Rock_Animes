@@ -171,7 +171,17 @@ body{
 .component-systemTabs .cards .card .cardContent:hover button{
   opacity: 1;
 }
+#popup{ //significa que objetos com id="popup" tera os atributos abaixo.
+  position: absolute; //pronto a charada morre aqui, isso ira deixar sua div "flutuando"
+  z-index: 10px; //garantir que ela ira fica em cima das outras coisas da pagina (exceto flash)
+  margin: 50px; // aqui voce ira controlar a posicao que a div ira aparecer.
+}
 </style>
+	<script type="text/javascript">
+function hidden(){
+document.getElementById('popup').style.display='none';
+}
+</script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -215,8 +225,7 @@ body{
 <br><br>
     <div class="containerTitles">
       <h1>Escolha a camiseta, o tamanho e envia pelo meu whatsApp 991666815<br>TAMANHAO: P, M, G<BR> FEMININO OU MACULINO<br>R$ 40,00 CADA UMA</h1>
-    <button><a href="https://docs.google.com/forms/d/e/1FAIpQLSdPFL7PlkhjZ210snx7ulhtN85pzUD9LO-PmZjMxuc9o97QDQ/viewform?fbzx=4054581227333134320">Clique aqui para escolher</a></button><br>
-<img src="medidas.jpg">	      
+      
 	      </div>
 
     <div class="component-systemTabs">
@@ -230,6 +239,9 @@ body{
                 <img src="/Rock_Animes/loja/camisa.jpg">
 		        <div class="cardContent">
                 <h2>COD#000</h2>
+		
+		
+				
                 <button><a href="/Rock_Animes/loja/camisa.jpg" class="popup" target="_blank" >View</a></button>
               </div>
             </div>
@@ -237,7 +249,10 @@ body{
                 <img src="/Rock_Animes/loja/camisa1.jpg">
 		        <div class="cardContent">
                 <h2>COD#001</h2>
-                <button><a href="/Rock_Animes/loja/camisa1.jpg" class="popup" target="_blank" >View</a></button>
+                <button>	<div id="popup">
+  <a href="#" onclick="hidden();"><img src="fechar.png"/>view</a>
+  <img src="/Rock_Animes/loja/camisa1.jpg"/>
+</div>	</button>
               </div>
             </div>
 			            <div class="card">
@@ -283,6 +298,8 @@ body{
               </div>
             </div>
 			            <div class="card">
+					        <button><a href="https://docs.google.com/forms/d/e/1FAIpQLSdPFL7PlkhjZ210snx7ulhtN85pzUD9LO-PmZjMxuc9o97QDQ/viewform?fbzx=4054581227333134320">Clique aqui para escolher</a></button><br>
+<img src="medidas.jpg">	
                 <img src="/Rock_Animes/loja/camisa8.jpg">
 		        <div class="cardContent">
                 <h2>COD#008</h2>
