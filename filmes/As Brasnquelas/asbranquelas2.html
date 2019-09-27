@@ -1,192 +1,79 @@
 <html>
 <head>
     <title>Teste Filme</title>
-<style type="text/css">
-body {
-  			margin: 30px;
-  			padding: 0;
-  			background: #ddd;
-  			font-family: Arial, Helvetica, sans-serif;
-  		}
+	</head>
+	<body>
+		
+		<script>
+			
+			/**
+ * Scroll Infinity
+ * @author Leandro Panegassi <leandropanegassi89@gmail.com>
+ *
+ * Example:
+ * <div id="infinity" data-infinity-url="infinity/news" data-infinity-limit="3" data-infinity-offset="3"></div>
+ */
 
-  		.title {
-  			width: 100%;
-  			max-width: 854px;
-  			margin: 0 auto;
-  		}
+$(function () {
 
-  		.caption {
-  			width: 100%;
-  			max-width: 854px;
-  			margin: 0 auto;
-  			padding: 20px 0;
-  		}
+	/**
+	 * @var int _window 	| Altura da janela do usuario
+	 * @var int _document 	| Altura da pagina inteira
+	 * @var string _url 	| URL que retornará os registros
+	 * @var ['POST', 'GET']	| Metodo de envio
+	 * @var int _limit 	| Limites de registros por requisicao
+	 * @var int _offset 	| Trás os próximos resultados
+	 * @var boolean _control| Para evitar que haja várias requisições desnecessárias
+	 */
 
-  		.vid-main-wrapper {
-  			width: 100%;
-  			max-width: 1100px;
-  			min-width: 440px;
-  			background: #fff;
-  			margin: 0 auto;
-  		}
+	var _window 	= $(window).height();
+	var _document 	= $(document).height();
+	var _url 	= $('#infinity').data('infinity-url');
+	var _method 	= 'POST';
+	var _limit 	= $('#infinity').data('infinity-limit');
+	var _offset 	= $('#infinity').data('infinity-offset');
+	var _control 	= true;
 
+	/**
+	 * Inicializo as mensagens de retorno ocultas
+	 */
+	$('.infinity-load').css('display', 'none');
+	$('.infinity-finish').css('display', 'none');
 
-  		/*  VIDEO PLAYER CONTAINER
- 		############################### */
-  		.vid-container {
-		    position: relative;
-		    padding-bottom: 52%;
-		    padding-top: 30px; 
-		    height: 0; 
-        width:70%;
-        float:left;
-		}
-		 
-		.vid-container iframe,
-		.vid-container object,
-		.vid-container embed {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    min-height: 360px;
-		}
+	$(window).scroll(function() {
+		if (_control && ($(window).scrollTop() >= ( _document - _window ) - 150))
+			$('#infinity').trigger('click');
+	});
 
-
-		/*  VIDEOS PLAYLIST 
- 		############################### */
-		.vid-list-container {
-			width: 30%;
-      height:360px;
-			overflow: hidden;
-      float:right;
-		}
-
-    .vid-list-container:hover, .vid-list-container:focus {
-       overflow-y: auto;
-     }
-
-		ol#vid-list {
-      margin:0;
-      padding:0;
-      background: #222;
-		}
-
-    ol#vid-list li {
-		  list-style: none;
-    }
-
-    ol#vid-list li a {
-      text-decoration: none;
-      background-color: #222;
-      height:55px;
-      display:block;
-      padding:10px;
-    }
-
-    ol#vid-list li a:hover {
-      background-color:#666666
-    }
-
-		.vid-thumb {
-      float:left;
-			margin-right: 8px;
-		}
-
-    .active-vid { 
-      background:#3A3A3A;
-    }
-
-		#vid-list .desc {
-			color: #CACACA;
-			font-size: 13px;
-			margin-top:5px;
-		}
-
-
-		@media (max-width: 624px) {
-			body {
-				margin: 15px;
+	$('#infinity').on('click', function() {
+		$.ajax({
+			url: _url,
+			type: _method,
+			async: false,
+			cache: false,
+			dataType: 'json',
+			data: { 
+				limit: _limit,
+				offset: _offset
+			},
+			beforeSend: function() {
+				$('.infinity-load').css('display', 'block');
 			}
-			.caption {
-				margin-top: 40px;
+		}).done(function(json) {
+			if (json['status'] == false) {
+				_control = false;
+				$('.infinity-finish').css('display', 'block');
+			} else {
+				_offset += _limit;
+				$('#infinity').attr('data-infinity-offset', _offset);
+				$('#infinity').append(json['html']);
 			}
-			.vid-list-container {
-				padding-bottom: 20px;
-			}
-
-		}
-    </style>
-    <script src="js/Rock_Animes/filmes/testevideo.js"></script>
-</head>
-<body>            
-  
-    
-    <div class="vid-main-wrapper clearfix">
-
-  		    <!-- THE YOUTUBE PLAYER -->
-      <div class="vid-container">
-          <iframe id="vid_frame" src="/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4" frameborder="0" width="560" height="315"></iframe>
-      </div>
-
-      <!-- THE PLAYLIST -->
-      <div class="vid-list-container">
-            <ol id="vid-list">
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 01.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">WeatherBeater™ Product Video</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 02.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">X-act Contour® Product Video</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 03.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">GearBox® Product Video</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 04.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">Mud Guards Product Video</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 05.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">Wheel Well Guards Product Video</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 06.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">Cargo Liner Product Video</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 07.mp4'">
-                  <span class="vid-thumb"></span>
-                  <div class="desc">Husky Liners Products</div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='/Rock_Animes/filmes/As Brasnquelas/As Branquelas 08.mp4'">
-                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/-Qpc79oaJQg/default.jpg" /></span>
-                  <div class="desc">Custom Molded Mud Guards</div>
-                </a>
-              </li>
-              
-            </ul>
-       </div>
-
-  	
-</div>
-
+			$('.infinity-load').css('display', 'none').delay(8000);
+		});
+	});
+});
+			
+		</script>
     
     
 </body>
