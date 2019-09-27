@@ -171,18 +171,7 @@ body{
 .component-systemTabs .cards .card .cardContent:hover button{
   opacity: 1;
 }
-#popup{ //significa que objetos com id="popup" tera os atributos abaixo.
-  position: absolute; //pronto a charada morre aqui, isso ira deixar sua div "flutuando"
-  z-index: 100px; //garantir que ela ira fica em cima das outras coisas da pagina (exceto flash)
-  margin: 400px; // aqui voce ira controlar a posicao que a div ira aparecer.
-}
 </style>
-<script type="text/javascript">
-function hidden(){
-document.getElementById('popup').style.display='none';
-}
-</script>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -250,10 +239,7 @@ document.getElementById('popup').style.display='none';
                 <img src="/Rock_Animes/loja/camisa1.jpg">
 		        <div class="cardContent">
                 <h2>COD#001</h2>
-                <button>	<div id="popup">
-  <a href="#" onclick="hidden();"></a>
-  <img src="/Rock_Animes/loja/camisa1.jpg"/>
-</div>	</button>
+                <button><a href="/Rock_Animes/loja/camisa1.jpg" class="popup">View</a></button>
               </div>
             </div>
 			            <div class="card">
