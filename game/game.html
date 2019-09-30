@@ -2,551 +2,192 @@
 <head>
  <title>GAME</title>
 	<style>
-		@charset "utf-8";
-body{
-	font-size: 13pt;
-}
-.habilitado{
-	display:inline-block;
-}
-.desabilitado{
-	display: none;
-}
-.msg{
-	font-weight: bold;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 14pt;
-}
-.erro{
-	color: #FF0000;	
-}
-.sucesso{
-	color: #0000FF;
-}
-.rotulo{
-	font-weight: bold;
-}
-.letra{
-	border: #000 1px solid;
-}
-input[type="text"],
-button{
-	height: 50px;
-	font-size: 100%;
-	border: #000 1px solid;
-	margin-bottom: 10px;
-}
-.corpo{
-	border: #000 1px solid;
-	width: 90%;
-	margin: auto;
-	padding-bottom: 150px;
-	min-height: 400px;
-	height: auto;
-	/*
-	padding: 50px;
-	*/
-}
-span{
-	margin: 4px;
-}
 
-.parteEscrito{
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200);
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+html{
+	width: 122%;
+	background: #004050;
+}
+.wrap,.wrap2{
+	width: 830px;
+	height: auto;
+	margin: 70px 100px;
 	float: left;
 }
-.desenho{
-	min-width: 300px;
-	width: auto;
-	float: right;
+.wrap2{
+	width: 410px !important;
 }
-.bnt[disabled="disabled"]:hover{
-	cursor: auto;
-}
-.bnt:hover{
+div[class^="metro"]{
+	float: left;
+	margin: 0 10px 10px 0;
+	height: 95px;
+	position: relative;
 	cursor: pointer;
+	transition: all .4s ease;
+  user-drag: element;
+  border: solid 2px transparent;
 }
-.entrada:focus{
-	background-color: #eee;
+div[class^="metro"]:hover{
+	border: solid 2px mintcream;
 }
-.letras,
-letra{
-	display: block;
+div[class^="metro"]:active{
+	transform: scale(.98,.98);
 }
-.letras{
-	margin-left: 50px;
+.metro-big{width: 200px;}
+.metro-small{width: 95px;}
+.last{margin-right: 0 !important;}
+.Start{
+	color: white;
+	font: normal 50px 'Yanone Kaffeesatz', sans-serif;
+	margin-bottom: 50px;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  transition: all .3s ease;
 }
-.alinhar{
-	font-size: 16pt;
-	text-align: center;
+.Start:hover{
+  text-shadow: 0 0 4px white;
 }
-.alinhar .rotulo{
-	display: block;
+.space{
+	margin-bottom: 110px;
 }
-.pergunta{
-	text-transform: uppercase;
-	font-size: 18pt;
-	font-weight: bold;
+.label{
+	position: absolute;
+	color: white;
+	font: 500 12px sans-serif;
+	left: 10px;
+  user-select: none;
 }
-.preenchimento{
-	font-size: 16pt;
+.bottom{bottom: 5px;}
+.top{top: 5px;}
+.chat{background: #df0024;}
+.calendar{
+  background: #00a9ec;
 }
-.preenchimento .rotulo{
-	text-transform: uppercase;
+.store{background: #ff9000;}
+.ie{background: #00abdc;}
+.people{background: #0e5d30;}
+.video{background: #8b0189;}
+.chrome{background: #ce4e4e;}
+.photo{
+  background: url('http://lorempixel.com/200/95/people');
+  background-position: -2px -2px;
 }
-.gerador{
-	width: 100%;
-	text-transform: uppercase;
-	text-align: center;
+.music{
+  background: #5f5f5f;
+  animation: flip 6s linear infinite;
+  transform: rotateX(0deg);
 }
-.selecionado{
-	text-transform: uppercase;
-	font-size: 20pt;
-	font-weight: bold;
-}
-.invisivel{
-	visibility: hidden;
-}
-.proximo{
-	display: block;
-}
-	</style>
- <script>
-var entrada;
-var respostaAtual;
-var perguntaAtual;
-var maxTentativas = 6;
-var tentativas = maxTentativas;
-var faseAtual;
-var ganhou;
-var perdeu;
-var acertos;
-var evento;
+.games{background: #00ff00;}
+.twitter{background: #19bfe5;}
+.gp{background: #d64136;}
+.fb{background: #3b5998;}
+.cnn{background: #fe0000;}
+.ps{background: #0c5fa1;}
+.bt{background: #2546e9;}
+.cc{background: #d20808;}
+.wmp{background: #f68935;}
+.tube{background: #c8312b;}
+.skype{background: #10bef2;}
 
-var aluno = new Array();
-aluno[1]  = "Adriano";		
-aluno[2]  = "Ane Karoliny";
-aluno[3]  = "Antonio";
-aluno[4]  = "Braulio";
-aluno[5]  = "Caio Rocha";
-aluno[6]  = "Cassio";
-aluno[7]  = "Devocy";
-aluno[8]  = "Dione";
-aluno[9]  = "Estevão";
-aluno[10] = "Flavio";
-aluno[11] = "Hiago";
-aluno[12] = "Ingrid";
-aluno[13] = "Jean Carvalho";
-aluno[14] = "Jean dos Santos";
-aluno[15] = "Kaio Cesar";
-aluno[16] = "Kleyson";
-aluno[17] = "Luis Filipe";
-aluno[18] = "Luiz Paulo";
-aluno[19] = "Marcelo";
-aluno[20] = "Marcos";
-aluno[21] = "Matheus Franco";
-aluno[22] = "Matheus Fontinele";
-aluno[23] = "Michael";
-aluno[24] = "Natanael";
-aluno[25] = "Pedro";
-aluno[26] = "Saulo";
-aluno[27] = "Wagner";
-aluno[28] = "Wanderson";
-aluno[29] = "Wescley";
-
-//Esquipe: 3 9 11 13 21 24
-var invalido = new Array();
-invalido[0] = aluno[3];
-invalido[1] = aluno[9];
-invalido[2] = aluno[11];
-invalido[3] = aluno[13];
-invalido[4] = aluno[21];
-invalido[5] = aluno[24];
-
-var msg = new Array();
-msg[0] = "Informe uma letra.";
-msg[1] = "Parabéns, você acertou!";
-msg[2] = "Errou! Preste mais atenção na próxima vez.";
-msg[3] = "Este jogador não pode participar do jogo.";
-msg[4] = "Ocorreu um erro, tente novamente.";
-msg[5] = "Informe uma resposta.";
-msg[6] = "Este jogador já foi sorteado!";
-msg[7] = "Esta letra já foi informada!";
-msg[8] = "Letra errada, tente outra.";
-
-var pergunta = new Array();
-pergunta[1] = "Qual a identidade secreta do Batman?" ;
-pergunta[2] = "Sai de casa...";
-pergunta[3] = "O que estamos buscando?";
-
-var resposta = new Array();
-resposta[1] = "Bruce Wayne";
-resposta[2] = "Comi pacarai";
-resposta[3] = "Trapezio";
-
-var imagem = new Array();
-imagem[0] = "/Rock_Animes/game/forca0.png";
-imagem[1] = "/Rock_Animes/game/forca1.png";
-imagem[2] = "/Rock_Animes/game/forca2.png";
-imagem[3] = "/Rock_Animes/game/forca3.png";
-imagem[4] = "/Rock_Animes/game/forca4.png";
-imagem[5] = "/Rock_Animes/game/forca5.png";
-imagem[6] = "/Rock_Animes/game/forca6.png";
-
-var letraInformada = new Array();
-var letraErrada = new Array();
-var todasLetras = new Array();
-var historico = new Array();
-
-$(document).ready(function inicio(){
-	$("#forca").append("<img id='imgForca' src='" + imagem[0] + "' width='50%' />");
-	ganhou = false;
-	perdeu = false;
-	faseAtual = 1;
-	acertos = 0;
-	$("#resposta").text(" ").hide();
-	$("#respostaInformada").text(" ").hide();
-	$("#perguntas").hide();
-	$("#mensagem").hide();
-	$("#bntNovoJogo").hide();
-	$("#faseAtual").text("Fase " + faseAtual);
-	$("#numTentativas").text("Tentativas: " + tentativas);
-
-	montaPalavra();
-	memento();
-});
-
-function trocaImagem(){
-	var valor;
-	switch(tentativas){
-		case 0: 
-			$("#imgForca").attr("src", imagem[6]);
-			break;
-		case 1: 
-			$("#imgForca").attr("src", imagem[5]);
-			break;
-		case 2: 
-			$("#imgForca").attr("src", imagem[4]);
-			break;
-		case 3:
-			$("#imgForca").attr("src", imagem[3]);
-			break;
-		case 4:
-			$("#imgForca").attr("src", imagem[2]);
-			break;
-		case 5:
-			$("#imgForca").attr("src", imagem[1]);
-			break;
-		case 6:{
-			$("#imgForca").attr("src", imagem[0]);
-			break;
-		}
-	}
+div[class^="icon"]{
+	width: 45px;
+	height: 45px;
+	margin: 20px auto;
+	background-size: 45px 45px;
+}
+.icon-calendar{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Apps-Calendar-Metro-icon.png');}
+.icon-chat{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Other-Mail-alt-Metro-icon.png');}
+.icon-store{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Microsoft-Store-Metro-icon.png');}
+.icon-ie{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Browsers-Internet-Explorer-10-Metro-icon.png');}
+.icon-people{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Folders-OS-User-No-Frame-Metro-icon.png');}
+.icon-video{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Folders-OS-My-Videos-Metro-icon.png');}
+.icon-chrome{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Browsers-Google-Chrome-Metro-icon.png');}
+.icon-music{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Apps-Google-Music-Metro-icon.png');}
+.icon-games{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Folders-OS-Games-alt-Metro-icon.png');}
+.icon-twitter{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Web-Twitter-alt-2-Metro-icon.png');}
+.icon-gp{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Web-Google-plus-Metro-icon.png');}
+.icon-fb{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Web-Facebook-alt-1-Metro-icon.png');}
+.icon-cnn{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Web-CNN-Metro-icon.png');}
+.icon-ps{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Apps-Adobe-Photoshop-Metro-icon.png');}
+.icon-bt{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Apps-Bluetooth-Metro-icon.png');}
+.icon-cc{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Apps-CCleaner-Metro-icon.png');}
+.icon-wmp{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Apps-Windows-Media-Player-Metro-icon.png');}
+.icon-tube{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-YouTube-alt-1-Metro-icon.png');}
+.icon-skype{background: url('http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/128/Apps-Skype-Metro-icon.png');}
+::-webkit-scrollbar{
+  width: 10px;
+	height: 10px;
+	cursor: pointer;	
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px 2px rgba(0,0,0,0.3);
+    background: #007491;
+}
+::-webkit-scrollbar-thumb {
+    background: #002f3b; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+::selection{
+    background: mintcream; 
 }
 
-$("#bntGeraJogador").click(function gerarJogador(){
-	$("#faseAtual").text("Fase " + faseAtual);
-	$("#numTentativas").text("Tentativas: " + tentativas);
-	
-	elementosHabilitados();
-	
-	$("#mensagem").text(" ");
-	var jogadorEscolhido;
-	jogadorEscolhido = Math.floor((Math.random() * aluno.length) + 1);
-	
-	localStorage.setItem("jogadorEscolhido", jogadorEscolhido);
-	
-	for(var i = 0; i < invalido.length; i++){
-		
-		if(invalido[i] == aluno[jogadorEscolhido]){
-			elementosDesabilitados();
-			if(i > 5){
-				$("#mensagem").removeClass("sucesso");
-				$("#mensagem").text(msg[6]).show().addClass("erro");
-			}else{
-				$("#mensagem").removeClass("sucesso");
-				$("#mensagem").text(msg[3]).show().addClass("erro");
-			}
-		}else if(aluno[jogadorEscolhido] == "undefined"
-			|| aluno[jogadorEscolhido] == null){
-			$("#mensagem").removeClass("sucesso");
-			$("#mensagem").text(msg[4]).show().addClass("erro");
-		}else{
-			$("#perguntas").show();
-			$("#jogadorGerado").text(aluno[jogadorEscolhido]);
-		}
-	}
-	invalido[++i] = aluno[jogadorEscolhido];
-	
-	entrada = null;
-	$("#entradaLetra").val(null);
-	$("#entradaResposta").val(null);
-});
-
-$("#entradaLetra").keyup(function informaLetra(){
-	entrada = $("#entradaLetra").val().toUpperCase();
-	$("#entradaResposta").val(null);
-	
-	localStorage.setItem("entradaLetra", entrada);
-	
-});
-
-
-$("#bntTentar").click(function tentarLetra(){
-	$("#mensagem").text(" ");
-	var entradaLetra = $("#entradaLetra").val();
-	if(entrada == null){
-		$("#mensagem").removeClass("sucesso");
-		$("#mensagem").text(msg[0]).show().addClass("erro");
-	}else{
-		if(entradaLetra == null || entradaLetra == "" || entradaLetra == "undefined"){
-			//entrada = null;
-			$("#mensagem").removeClass("sucesso");
-			$("#mensagem").text(msg[0]).show().addClass("erro");	
-		}else{
-			if(letraInformada.indexOf(entrada) < 0){
-				letraInformada.push(entrada);
-				todasLetras.push(entrada);
-				$("#letraEscolhida").text("Letras informadas: " + todasLetras.join());
-				
-				localStorage.setItem("todasLetras", todasLetras.join());
-				
-				preencheLacuna();	
-			}else{
-				$("#mensagem").removeClass("sucesso");
-				$("#mensagem").text(msg[7]).show().addClass("erro");	
-			}
-		}
-	}
-	//$("#entradaLetra").val(null);
-	$("#entradaResposta").val(null);
-	entrada = null;
-});
-
-$("#entradaResposta").keyup(function informaResposta(){
-	entrada = $("#entradaResposta").val().toUpperCase();
-	$("#entradaLetra").val(null);
-	
-	localStorage.setItem("entradaResposta", entrada);
-});
-
-$("#bntResponder").click(function responder(){
-	var entradaResposta = $("#entradaResposta").val();;
-	$("#mensagem").text(" ").show();
-	
-	if(entrada == null){
-		$("#mensagem").removeClass("sucesso");
-		$("#mensagem").text(msg[5]).show().addClass("erro");
-	}else{
-			if(entradaResposta == null || entradaResposta == "" || entradaResposta == "undefined"){
-			//entrada = null;
-			$("#mensagem").removeClass("sucesso");
-			$("#mensagem").text(msg[5]).show().addClass("erro");	
-		}else{
-			$("#respostaInformada").text("Resposta Informada: " + entrada).show();
-			fase();
-			if(perdeu){
-				gameOver();
-			}
-		}
-	}
-	entrada = null;
-	$("#entradaLetra").val(null);
-});
-
-function fase(){
-	perguntaAtual = pergunta[faseAtual];
-	respostaAtual = resposta[faseAtual].toUpperCase();
-	
-	localStorage.setItem("perguntaAtual", perguntaAtual);
-	localStorage.setItem("respostaAtual", respostaAtual);
-	
-	$("#perguntaAtual").text(perguntaAtual);
-	
-	if(entrada == respostaAtual){
-		ganhou = true;
-		perdeu = false;
-		preencheLacuna();
-		vitoria();
-	
-	}else{
-		perdeu = true;
-		$("#mensagem").removeClass("sucesso");
-		$("#mensagem").text(msg[2]).addClass("erro");
-		$("#numTentativas").text("Tentativas: " + tentativas); 
-	}
-	
+@keyframes flip{
+  0%{
+    transform: rotateX(0deg);
+  }
+  15%{
+    transform: rotateX(360deg);  
+  }
+  100%{
+    transform: rotateX(360deg); 
+  }
 }
 
-function montaPalavra(){
-	respostaAtual = resposta[faseAtual].toUpperCase();
-	var qntLetras = respostaAtual.length;
-	
-	for(var i=0; i<qntLetras; i++){
-		
-	$("#palavra").append('<input id="l' + i + '" class="letra" type="text" disabled="disabled" size="1" />');	
-		if(respostaAtual.charAt(i) == "-"){
-			$("#l"+i).val("-");
-		}else if(respostaAtual.charAt(i) == " "){
-			$("#l"+i).addClass("invisivel");
-			$("#l"+i).val(null);
-		}else{
-			$("#l"+i).val(null);
-		}
-	}
-	fase();
+.photo img{
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  opacity: 0;
+  animation: fade 8s ease-in-out infinite 8s;
+  z-index: 0;
+  border: solid 2px transparent;
+  transition: all .3s ease;
 }
 
-function preencheLacuna(){
-	var qntLetras = respostaAtual.length;
-	var letraInformada = respostaAtual.search(entrada);
-
-	if(ganhou){	
-		for(var i=0; i<=qntLetras; i++){	
-			$("#l"+i).val(respostaAtual.charAt(i));
-		}	
-	}else{
-		var acertoLetra = 0;
-		if(letraInformada > -1){
-			acertos++;
-			
-			if(acertos >= qntLetras){
-				vitoria();
-			}	
-		
-			for(var i=0; i<=qntLetras; i++){	
-				if(entrada == respostaAtual.charAt(i)){
-					$("#l"+i).val(respostaAtual.charAt(letraInformada));
-					acertoLetra++;
-				}
-			}	
-			acertos = acertos + acertoLetra -1;
-			//$("#l"+letraInformada).val(respostaAtual.charAt(letraInformada));
-		}else{
-			letraErrada.push(entrada);	
-			$("#letraErrada").text("Letras Erradas: " + letraErrada.join());
-			tentativas--;
-			trocaImagem();
-			$("#mensagem").removeClass("sucesso");
-			$("#mensagem").text(msg[8]).show().addClass("erro");
-			$("#numTentativas").text("Tentativas: " + tentativas);
-			if(tentativas <= 0){
-				gameOver();
-			}
-		}
-	}
+.photo img:hover{
+  border: solid 2px mintcream;
 }
 
-function elementosHabilitados(){
-	$("#bntResponder").removeAttr("disabled", "disabled");
-	$("#bntTentar").removeAttr("disabled", "disabled");
-	$("#entradaResposta").removeAttr("disabled", "disabled");
-	$("#entradaLetra").removeAttr("disabled", "disabled");
+@keyframes fade{
+  0%{
+    opacity: 0; 
+  }
+  10%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
 }
 
-function elementosDesabilitados(){
-	$("#numTentativas").text("Tentativas: " + tentativas);
-	$("#bntResponder").attr("disabled", "disabled");
-	$("#bntTentar").attr("disabled", "disabled");
-	$("#entradaResposta").attr("disabled", "disabled");
-	$("#entradaLetra").attr("disabled", "disabled");
-}
-
-function gameOver(){
-	$("#imgForca").attr("src", imagem[6]);
-	var qntLetras = respostaAtual.length;
-	elementosDesabilitados();
-	faseAtual++;
-	
-	localStorage.setItem("faseAtual", faseAtual);
-	
-	perguntaAtual = pergunta[faseAtual];
-	perdeu = true;
-	$("#mensagem").removeClass("sucesso");
-	$("#mensagem").text(msg[2]).addClass("erro");
-	$("#bntNovoJogo").show();
-	$("#bntGeraJogador").attr("disabled", "disabled");
-	//fim();
-}
-
-function vitoria(){
-	$("#mensagem").removeClass("erro");
-	$("#mensagem").text(msg[1]).addClass("sucesso").show();
-	faseAtual++;
-	
-	localStorage.setItem("faseAtual", faseAtual);
-	
-	tentativas = maxTentativas;
-	elementosDesabilitados();
-	perguntaAtual = pergunta[faseAtual];
-	$("#bntNovoJogo").show();
-	$("#bntGeraJogador").attr("disabled", "disabled");
-	//fim();
-}
-
-$("#bntNovoJogo").click(function zeraCampos(){
-	fim();
-	$("#faseAtual").text("Fase " + faseAtual);
-	$("#numTentativas").text("Tentativas: " + tentativas);
-	$("#resposta").text("A resposta correta é: " + respostaAtual).show();
-	$("#perguntaAtual").text("Questão: " + perguntaAtual);
-	
-	var qntLetras = respostaAtual.length;
-	for(var i=0; i<=qntLetras; i++){	
-		$("#l"+i).remove();
-	}
-	$("#bntGeraJogador").removeAttr("disabled", "disabled");
-	$("#respostaInformada").text(" ");
-	$("#letraErrada").text(" ");
-	$("#letraEscolhida").text(" ");
-	$("#jogadorGerado").text(" ");
-	$("#resposta").text(" ").hide();
-	$("#respostaInformada").text(" ").hide();
-	$("#entradaResposta").val(null);
-	$("#entradaLetra").val(null);
-	$("#perguntas").hide();
-	$("#mensagem").hide();
-	
-	$("#bntNovoJogo").hide();
-	
-	acertos = 0;
-	//entrada = null;
-	tentativas = maxTentativas;
-	ganhou = false;
-	perdeu = false;	
-	letraInformada = new Array();
-	letraErrada = new Array();
-	todasLetras = new Array();
-	
-	$("#bntNovoJogo").hide();
-	
-	$("#imgForca").attr("src", imagem[0]);
-	montaPalavra();
-});
-
-function fim(){
-	if(perguntaAtual == "undefined"
-		|| perguntaAtual == ""
-		|| perguntaAtual == null){
-		
-		$("html").append("<h1>Isso é tudo pessoal!</h1>");
-		$("#jogo").remove();
-	}
-}
-
-function memento(){
-	
-	var passo = localStorage.getItem("passo");
-	
-	if(passo == null || passo == "undefined"
-		|| passo == ""){
-		evento = 0;
-	}
-	evento++;
-	historico.push(evento);
-	localStorage.setItem("passo", evento);
-}
-	</script>
+</style>
  <link rel="stylesheet" type="text/css" href="game.css">
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -584,61 +225,93 @@ function memento(){
  </header>
  <br><br><br>
  <section class="container">
-  <!--
-Autor: Matheus Franco
-Data: 04/06/2016
--->
-
-<!--
-Se não aparecer imagem, significa que ela não está mais no repositório.
--->
-
-<div id="jogo" class="corpo">
-	<div class="alinhar">
-			<label class="rotulo">Pergunta:</label>
-			<span id="perguntaAtual" class="pergunta"></span>
+<div class="wrap">
+    <h1 class="Start">Start</h1>
+  	<div class="metro-big chat">
+			<div class="icon-chat"></div>
+			<span class="label bottom">Mail</span>
 		</div>
-		<div class="alinhar">
-		<span id="mensagem" class="msg"></span>
+		<div class="metro-big calendar">
+			<div class="icon-calendar"></div>
+			<span class="label bottom">Calendar</span>
+		</div>
+		<div class="metro-small store">
+			<div class="icon-store"></div>
+			<span class="label bottom">Store</span>
+		</div>
+		<div class="metro-big ie">
+			<div class="icon-ie"></div>
+			<span class="label bottom">Internet Explorer</span>
+		</div>
+		<div class="metro-small people last">
+			<div class="icon-people"></div>
+			<span class="label bottom">People</span>
+		</div>
+		<div class="metro-small chrome">
+			<div class="icon-chrome"></div>
+			<span class="label bottom">Chrome</span>
+		</div>
+		<div class="metro-big photo">
+      <img src="http://lorempixel.com/200/95/animals" class="img-delay-1" />
+			<span class="label bottom">Photos</span>
+		</div>
+		<div class="metro-big video">
+			<div class="icon-video"></div>
+			<span class="label bottom">Videos</span>
+		</div>
+		<div class="metro-big music">
+			<div class="icon-music"></div>
+			<span class="label bottom">Musics</span>
+		</div>
+		<div class="metro-small games last">
+			<div class="icon-games"></div>
+			<span class="label bottom">Games</span>
+		</div>
+		<div class="metro-small twitter">
+			<div class="icon-twitter"></div>
+			<span class="label bottom">twitter</span>
+		</div>
+		<div class="metro-small gp">
+			<div class="icon-gp"></div>
+			<span class="label bottom">Google+</span>
+		</div>
+		<div class="metro-small fb">
+			<div class="icon-fb"></div>
+			<span class="label bottom">Facebook</span>
+		</div>
+		<div class="metro-small cnn">
+			<div class="icon-cnn"></div>
+			<span class="label bottom">CNN</span>
+		</div>
+		<div class="metro-big ps">
+			<div class="icon-ps"></div>
+			<span class="label bottom">Adobe Photoshop</span>
+		</div>
 	</div>
-			<div class="alinhar">
-		<button id="bntGeraJogador" class="bnt gerador" type="button" value="Gerar jogador" title="Clique aqui para gerar um jogador">Gerar jogador</button>
-		<label class="rotulo">É a vez de:</label>
-		<span id="jogadorGerado" class="selecionado"></span>
+
+	<div class="wrap2">
+		<div class="space"></div>
+		<div class="metro-small bt">
+			<div class="icon-bt"></div>
+			<span class="label bottom">Bluetooth</span>
 		</div>
-	<div class="parteEscrito">
-
-	<span id="faseAtual" class="desabilitado"></span>
-
-	<span id="numTentativas" class="desabilitado"></span>
-	<div id="perguntas">
-		<div class="preenchimento">
-			<label class="rotulo">Letra: </label>
-			<input id="entradaLetra" type="text" class="entrada" size="1" maxlength="1" title="Informe uma letra" />
-			<button id="bntTentar" class="bnt" type="button" value="Tentar!" title="Clique aqui para usar sua letra">Tentar!</button>
-			<br />
-			<label class="rotulo">Resposta: </label>
-			<input id="entradaResposta" type="text" class="entrada" title="Informe a resposta" />
-			<button id="bntResponder" class="bnt" type="button" value="Responder!" title="Clique aqui para responder">Responder!</button>
-			<br />
-			<div id="palavra" class="letras">
-			<span id="letraEscolhida"></span>
-			<br />
-			<span id="letraErrada"></span>
-			<br />
-			<span id="respostaInformada"></span>
-			<br />
-			<span id="resposta"></span>
-			<br />
-			
-			<button id="bntNovoJogo" class="bnt proximo" type="button" value="Próxima Pergunta" title="Clique aqui para avançar a fase">Próxima pergunta</button>
-				
+		<div class="metro-small cc">
+			<div class="icon-cc"></div>
+			<span class="label bottom">CCleaner</span>
+		</div>
+		<div class="metro-big wmp last">
+			<div class="icon-wmp"></div>
+			<span class="label bottom">Windows Media Player</span>
+		</div>
+		<div class="metro-small tube">
+			<div class="icon-tube"></div>
+			<span class="label bottom">Youtube</span>
+		</div>
+		<div class="metro-big skype">
+			<div class="icon-skype"></div>
+			<span class="label bottom">Skype</span>
 		</div>
 	</div>
-    </div>
-			</div>
-	 <div id="forca" class="desenho"></div>
-</div>
  </section>
  </body>
 </html>
