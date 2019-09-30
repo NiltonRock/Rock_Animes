@@ -1,240 +1,434 @@
-//whoa, just noticed this no longer works (30-10-2015), tap once and it's immediate game over. Hope to fix this soon. apologies to all you  flap masters :D
+var entrada;
+var respostaAtual;
+var perguntaAtual;
+var maxTentativas = 6;
+var tentativas = maxTentativas;
+var faseAtual;
+var ganhou;
+var perdeu;
+var acertos;
+var evento;
 
-//Entry for http://jams.gamejolt.io/lowrezjam2014/games
-//sprite sheet : http://sakri.net/stuff/canvas/FlappyBird32x32Tall.png
+var aluno = new Array();
+aluno[1]  = "Adriano";		
+aluno[2]  = "Ane Karoliny";
+aluno[3]  = "Antonio";
+aluno[4]  = "Braulio";
+aluno[5]  = "Caio Rocha";
+aluno[6]  = "Cassio";
+aluno[7]  = "Devocy";
+aluno[8]  = "Dione";
+aluno[9]  = "Estevão";
+aluno[10] = "Flavio";
+aluno[11] = "Hiago";
+aluno[12] = "Ingrid";
+aluno[13] = "Jean Carvalho";
+aluno[14] = "Jean dos Santos";
+aluno[15] = "Kaio Cesar";
+aluno[16] = "Kleyson";
+aluno[17] = "Luis Filipe";
+aluno[18] = "Luiz Paulo";
+aluno[19] = "Marcelo";
+aluno[20] = "Marcos";
+aluno[21] = "Matheus Franco";
+aluno[22] = "Matheus Fontinele";
+aluno[23] = "Michael";
+aluno[24] = "Natanael";
+aluno[25] = "Pedro";
+aluno[26] = "Saulo";
+aluno[27] = "Wagner";
+aluno[28] = "Wanderson";
+aluno[29] = "Wescley";
 
-var readyStateCheckInterval = setInterval( function() {
-    if (document.readyState === "complete") {
-        clearInterval(readyStateCheckInterval);
-        initGame();
-    }
-}, 10);
+//Esquipe: 3 9 11 13 21 24
+var invalido = new Array();
+invalido[0] = aluno[3];
+invalido[1] = aluno[9];
+invalido[2] = aluno[11];
+invalido[3] = aluno[13];
+invalido[4] = aluno[21];
+invalido[5] = aluno[24];
 
-var bgLoc = {x:0, y:0, width:32, height:32};
-var groundLoc = {x:0, y:31, width:35, height:1};
-var instructionsLoc = {x:6, y:49, width:17, height:21};
-var gameOverLoc = {x:6, y:32, width:21, height:17};
-var birdLocs = [{x:32, y:0, width:5, height:3}, {x:32, y:3, width:5, height:3}, {x:32, y:6, width:5, height:3}];
-var tubeLoc = {x:0, y:32, width:6, height:44};
-var hiscoreLoc = {x:6, y:70, width:30, height:10};
-var scoreLocs = [32, 9, 27, 32, 32, 32, 27, 41, 32, 41, 27, 50, 32, 50, 27, 59, 32, 59, 32, 18];
+var msg = new Array();
+msg[0] = "Informe uma letra.";
+msg[1] = "Parabéns, você acertou!";
+msg[2] = "Errou! Preste mais atenção na próxima vez.";
+msg[3] = "Este jogador não pode participar do jogo.";
+msg[4] = "Ocorreu um erro, tente novamente.";
+msg[5] = "Informe uma resposta.";
+msg[6] = "Este jogador já foi sorteado!";
+msg[7] = "Esta letra já foi informada!";
+msg[8] = "Letra errada, tente outra.";
 
-var flappyBirdSource = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAABQCAYAAACecbxxAAACY0lEQVRoge2XPW4CMRCF5yooLeegpIw4SZp0dBF34DBIKSMOkKQJUgpyBuQUyYIZv/mx1wsGraXR4vXu+Jv3Zheg59e3cM3YbqbH+Dl8BiIiujYUEVEHtZvPwm4+C01AERF9LB+On5uAas6+uKdG+27Oviafvu1mGlq0L40WoOLRFFR8HKFGqLuFau7pa/I91SRUk/aJjb4/vB+D3xivea/xrkMotOElA9r38r0K14y4wVuC6sYI5YY6RkNQpzFC3TTU02Ya1vtF+AqrcMnP6/0iWUvAuoXH5QQ/EXZY16N16R4din8FoHmcULqO50Pnzs5bUNKmfBMNNlaFQ8HzfaG0Y7Q5ylkOhRTwHNnmIlSxfaVHL1SsWBEUUo5bADdKbZKvrWEfggIWovNZ9qH3x6VChvKoxNclJapCeY5oc+2zBO2ybwgobb0alKTCVaHQRpaCWjHZUJYtsGKhmVX1HpeTwKH+wUwr+LoEZdhHyXUaVIVIlIJWpfDqKAXJyYfW9CTIIm1eqUg7Ceopo4/cRRYUdkpUE4qYMuDcnUD16amL2uesEqqTqfZ5IiOycvWFou6GHraJeXrkqlZdTdX/Et4tlMs+5QvZhCrpKV6UWOCA/2ZUxYqg0BPHq+XrTvVs1a1fnkhyVGFGn/VTqkkodPMQUFXti5PB5AKUES6oM+UcCuW8JvBwvBI81dWByYBCm+ZA5heU+w85Xtd6SpubfdgHKq5SmqOeM/uwApQ6d0KdjwGUKoHyK8X955ta6/yI7onniWJsmEoZVoj3I8USpQaAUmEGhbKsQHMElWWfEtZ6n6BfqpBLl8a8BXQAAAAASUVORK5CYII=";
-var spriteSheetImage = new Image();
-spriteSheetImage.src = flappyBirdSource;
-var spriteSheetCanvas = document.createElement("canvas");
-spriteSheetCanvas.width = spriteSheetImage.width;
-spriteSheetCanvas.height = spriteSheetImage.height;
-var spriteSheetContext = spriteSheetCanvas.getContext("2d");
-spriteSheetContext.drawImage(spriteSheetImage, 0, 0);
+var pergunta = new Array();
+pergunta[1] = "Qual a identidade secreta do Batman?" ;
+pergunta[2] = "Sai de casa...";
+pergunta[3] = "O que estamos buscando?";
 
-var renderCanvas = document.createElement("canvas");
-renderCanvas.width = renderCanvas.height = 32;
-var renderContext = renderCanvas.getContext("2d");
-renderContext.globalCompositeOperation = "destination-over";
-var collisionCanvas = document.createElement("canvas");
+var resposta = new Array();
+resposta[1] = "Bruce Wayne";
+resposta[2] = "Comi pacarai";
+resposta[3] = "Trapezio";
 
-function drawSpriteSheetImage(context, locRect, x, y){
-    context.drawImage(spriteSheetImage, locRect.x, locRect.y, locRect.width, locRect.height, x, y, locRect.width, locRect.height);
+var imagem = new Array();
+imagem[0] = "https://4.bp.blogspot.com/-psq1cvp8ZqA/V1S9Jxrju4I/AAAAAAAAA_4/VGZ7GeSGWaY1UQY0WpENjBUnE621fJVPACLcB/s200/forca0.png";
+imagem[1] = "https://3.bp.blogspot.com/-G70a1KHVTs0/V1S9J0BgL9I/AAAAAAAAA_w/ND8WKk6ffeIA3k9ii1bTfyp-HlOK_4I6QCLcB/s200/forca1.png";
+imagem[2] = "https://1.bp.blogspot.com/-RB6o0ECFMQU/V1S9J1YE1-I/AAAAAAAAA_0/Zod7jdOPLg4nxihqX8DyQoLTLqr1EUS1QCLcB/s200/forca2.png";
+imagem[3] = "https://1.bp.blogspot.com/-_8-j5ol9Fvg/V1S9Kb1_1cI/AAAAAAAABAA/ywK-WN8MYZQTAA9LXUfcoFAEFL3OHdLfQCLcB/s200/forca3.png";
+imagem[4] = "https://2.bp.blogspot.com/-dTFL3jVSS5Q/V1S9KQRuuxI/AAAAAAAABAE/hDo6y6m01tMJ0QmwEeEQyi0CNdxP9HeGwCLcB/s200/forca4.png";
+imagem[5] = "https://3.bp.blogspot.com/-1HoOX4Aze8c/V1S9KiHxpyI/AAAAAAAABAQ/pcnHKw0UbwAKdcaMl6xfkD6ohNLJQnzowCLcB/s200/forca5.png";
+imagem[6] = "https://2.bp.blogspot.com/-AJjWekfS3nQ/V1S9KlnvFMI/AAAAAAAABAM/978o9oBROYoOm4tPJTDk5Zb8hxmN6sqYgCLcB/s200/forca6.png";
+
+var letraInformada = new Array();
+var letraErrada = new Array();
+var todasLetras = new Array();
+var historico = new Array();
+
+$(document).ready(function inicio(){
+	$("#forca").append("<img id='imgForca' src='" + imagem[0] + "' width='50%' />");
+	ganhou = false;
+	perdeu = false;
+	faseAtual = 1;
+	acertos = 0;
+	$("#resposta").text(" ").hide();
+	$("#respostaInformada").text(" ").hide();
+	$("#perguntas").hide();
+	$("#mensagem").hide();
+	$("#bntNovoJogo").hide();
+	$("#faseAtual").text("Fase " + faseAtual);
+	$("#numTentativas").text("Tentativas: " + tentativas);
+
+	montaPalavra();
+	memento();
+});
+
+function trocaImagem(){
+	var valor;
+	switch(tentativas){
+		case 0: 
+			$("#imgForca").attr("src", imagem[6]);
+			break;
+		case 1: 
+			$("#imgForca").attr("src", imagem[5]);
+			break;
+		case 2: 
+			$("#imgForca").attr("src", imagem[4]);
+			break;
+		case 3:
+			$("#imgForca").attr("src", imagem[3]);
+			break;
+		case 4:
+			$("#imgForca").attr("src", imagem[2]);
+			break;
+		case 5:
+			$("#imgForca").attr("src", imagem[1]);
+			break;
+		case 6:{
+			$("#imgForca").attr("src", imagem[0]);
+			break;
+		}
+	}
 }
 
-var canvas, context, gameState, score, groundX = 0, birdY, birdYSpeed, birdX = 5, birdFrame = 0, activeTube, tubes = [], collisionContext, scale, scoreLoc = {width:5, height:9}, hiScore = 0;
-var HOME = 0, GAME = 1, GAME_OVER = 2, HI_SCORE = 3;
+$("#bntGeraJogador").click(function gerarJogador(){
+	$("#faseAtual").text("Fase " + faseAtual);
+	$("#numTentativas").text("Tentativas: " + tentativas);
+	
+	elementosHabilitados();
+	
+	$("#mensagem").text(" ");
+	var jogadorEscolhido;
+	jogadorEscolhido = Math.floor((Math.random() * aluno.length) + 1);
+	
+	localStorage.setItem("jogadorEscolhido", jogadorEscolhido);
+	
+	for(var i = 0; i < invalido.length; i++){
+		
+		if(invalido[i] == aluno[jogadorEscolhido]){
+			elementosDesabilitados();
+			if(i > 5){
+				$("#mensagem").removeClass("sucesso");
+				$("#mensagem").text(msg[6]).show().addClass("erro");
+			}else{
+				$("#mensagem").removeClass("sucesso");
+				$("#mensagem").text(msg[3]).show().addClass("erro");
+			}
+		}else if(aluno[jogadorEscolhido] == "undefined"
+			|| aluno[jogadorEscolhido] == null){
+			$("#mensagem").removeClass("sucesso");
+			$("#mensagem").text(msg[4]).show().addClass("erro");
+		}else{
+			$("#perguntas").show();
+			$("#jogadorGerado").text(aluno[jogadorEscolhido]);
+		}
+	}
+	invalido[++i] = aluno[jogadorEscolhido];
+	
+	entrada = null;
+	$("#entradaLetra").val(null);
+	$("#entradaResposta").val(null);
+});
 
-function initGame(){
-    canvas = document.getElementById("gameCanvas");
-    context = canvas.getContext("2d");
-    scale = Math.floor(Math.min(window.innerHeight, window.innerWidth) / 32);
-    canvas.width = scale * 32;
-    canvas.height = scale * 32;
-    canvas.style.left = window.innerWidth / 2 - (scale * 32) / 2 + "px";
-    canvas.style.top = window.innerHeight / 2 - (scale * 32) / 2 + "px";
-    window.addEventListener( "keydown", handleUserInteraction, false );
-    canvas.addEventListener('touchstart', handleUserInteraction, false);
-    canvas.addEventListener('mousedown', handleUserInteraction, false);
-    collisionCanvas.width = birdX + 8;
-    collisionCanvas.height = 32;
-    collisionContext = collisionCanvas.getContext("2d");
-    collisionContext.globalCompositeOperation = "xor";
-    startGame();
-    setInterval(loop, 40);
+$("#entradaLetra").keyup(function informaLetra(){
+	entrada = $("#entradaLetra").val().toUpperCase();
+	$("#entradaResposta").val(null);
+	
+	localStorage.setItem("entradaLetra", entrada);
+	
+});
+
+
+$("#bntTentar").click(function tentarLetra(){
+	$("#mensagem").text(" ");
+	var entradaLetra = $("#entradaLetra").val();
+	if(entrada == null){
+		$("#mensagem").removeClass("sucesso");
+		$("#mensagem").text(msg[0]).show().addClass("erro");
+	}else{
+		if(entradaLetra == null || entradaLetra == "" || entradaLetra == "undefined"){
+			//entrada = null;
+			$("#mensagem").removeClass("sucesso");
+			$("#mensagem").text(msg[0]).show().addClass("erro");	
+		}else{
+			if(letraInformada.indexOf(entrada) < 0){
+				letraInformada.push(entrada);
+				todasLetras.push(entrada);
+				$("#letraEscolhida").text("Letras informadas: " + todasLetras.join());
+				
+				localStorage.setItem("todasLetras", todasLetras.join());
+				
+				preencheLacuna();	
+			}else{
+				$("#mensagem").removeClass("sucesso");
+				$("#mensagem").text(msg[7]).show().addClass("erro");	
+			}
+		}
+	}
+	//$("#entradaLetra").val(null);
+	$("#entradaResposta").val(null);
+	entrada = null;
+});
+
+$("#entradaResposta").keyup(function informaResposta(){
+	entrada = $("#entradaResposta").val().toUpperCase();
+	$("#entradaLetra").val(null);
+	
+	localStorage.setItem("entradaResposta", entrada);
+});
+
+$("#bntResponder").click(function responder(){
+	var entradaResposta = $("#entradaResposta").val();;
+	$("#mensagem").text(" ").show();
+	
+	if(entrada == null){
+		$("#mensagem").removeClass("sucesso");
+		$("#mensagem").text(msg[5]).show().addClass("erro");
+	}else{
+			if(entradaResposta == null || entradaResposta == "" || entradaResposta == "undefined"){
+			//entrada = null;
+			$("#mensagem").removeClass("sucesso");
+			$("#mensagem").text(msg[5]).show().addClass("erro");	
+		}else{
+			$("#respostaInformada").text("Resposta Informada: " + entrada).show();
+			fase();
+			if(perdeu){
+				gameOver();
+			}
+		}
+	}
+	entrada = null;
+	$("#entradaLetra").val(null);
+});
+
+function fase(){
+	perguntaAtual = pergunta[faseAtual];
+	respostaAtual = resposta[faseAtual].toUpperCase();
+	
+	localStorage.setItem("perguntaAtual", perguntaAtual);
+	localStorage.setItem("respostaAtual", respostaAtual);
+	
+	$("#perguntaAtual").text(perguntaAtual);
+	
+	if(entrada == respostaAtual){
+		ganhou = true;
+		perdeu = false;
+		preencheLacuna();
+		vitoria();
+	
+	}else{
+		perdeu = true;
+		$("#mensagem").removeClass("sucesso");
+		$("#mensagem").text(msg[2]).addClass("erro");
+		$("#numTentativas").text("Tentativas: " + tentativas); 
+	}
+	
 }
 
-function startGame(){
-    gameState = HOME;
-    birdYSpeed = score = 0;
-    birdY = 14;
-    for(var i = 0; i < 2; i++){
-        tubes[i] = {x : Math.round(48 + i * 19) };
-        setTubeY(tubes[i]);
-    }
+function montaPalavra(){
+	respostaAtual = resposta[faseAtual].toUpperCase();
+	var qntLetras = respostaAtual.length;
+	
+	for(var i=0; i<qntLetras; i++){
+		
+	$("#palavra").append('<input id="l' + i + '" class="letra" type="text" disabled="disabled" size="1" />');	
+		if(respostaAtual.charAt(i) == "-"){
+			$("#l"+i).val("-");
+		}else if(respostaAtual.charAt(i) == " "){
+			$("#l"+i).addClass("invisivel");
+			$("#l"+i).val(null);
+		}else{
+			$("#l"+i).val(null);
+		}
+	}
+	fase();
 }
 
-function loop(){
-    switch(gameState){
-        case HOME: renderHome();
-            break;
-        case GAME : renderGame();
-            break;
-        case GAME_OVER: renderGameOver();
-            break;
-        case HI_SCORE : renderHiScore();
-            break;
-    }
+function preencheLacuna(){
+	var qntLetras = respostaAtual.length;
+	var letraInformada = respostaAtual.search(entrada);
+
+	if(ganhou){	
+		for(var i=0; i<=qntLetras; i++){	
+			$("#l"+i).val(respostaAtual.charAt(i));
+		}	
+	}else{
+		var acertoLetra = 0;
+		if(letraInformada > -1){
+			acertos++;
+			
+			if(acertos >= qntLetras){
+				vitoria();
+			}	
+		
+			for(var i=0; i<=qntLetras; i++){	
+				if(entrada == respostaAtual.charAt(i)){
+					$("#l"+i).val(respostaAtual.charAt(letraInformada));
+					acertoLetra++;
+				}
+			}	
+			acertos = acertos + acertoLetra -1;
+			//$("#l"+letraInformada).val(respostaAtual.charAt(letraInformada));
+		}else{
+			letraErrada.push(entrada);	
+			$("#letraErrada").text("Letras Erradas: " + letraErrada.join());
+			tentativas--;
+			trocaImagem();
+			$("#mensagem").removeClass("sucesso");
+			$("#mensagem").text(msg[8]).show().addClass("erro");
+			$("#numTentativas").text("Tentativas: " + tentativas);
+			if(tentativas <= 0){
+				gameOver();
+			}
+		}
+	}
 }
 
-function handleUserInteraction(event){
-    switch(gameState){
-        case HOME: gameState = GAME;
-            break;
-        case GAME : birdYSpeed = -1.4;//"tap boost"
-            break;
-        case HI_SCORE: startGame();
-            break;
-    }
-    if(event){
-        event.preventDefault();//stop propagation chain
-    }
+function elementosHabilitados(){
+	$("#bntResponder").removeAttr("disabled", "disabled");
+	$("#bntTentar").removeAttr("disabled", "disabled");
+	$("#entradaResposta").removeAttr("disabled", "disabled");
+	$("#entradaLetra").removeAttr("disabled", "disabled");
 }
 
-function renderHome(){
-    renderContext.clearRect(0,0,32,32);
-    drawSpriteSheetImage(renderContext, instructionsLoc, 32 - instructionsLoc.width - 1, 1);
-    updateBirdHome();
-    renderGround(true);
-    drawSpriteSheetImage(renderContext, bgLoc, 0, 0);
-    renderToScale();
+function elementosDesabilitados(){
+	$("#numTentativas").text("Tentativas: " + tentativas);
+	$("#bntResponder").attr("disabled", "disabled");
+	$("#bntTentar").attr("disabled", "disabled");
+	$("#entradaResposta").attr("disabled", "disabled");
+	$("#entradaLetra").attr("disabled", "disabled");
 }
 
-function renderGame(){
-    renderContext.clearRect(0,0,32,32);
-    collisionContext.clearRect(0,0,collisionCanvas.width, collisionCanvas.height);
-    renderScore(score, renderScoreXGame, 1);
-    renderGround(true);
-    renderTubes();
-    updateBirdGame();
-    checkCollision();
-    drawSpriteSheetImage(renderContext, bgLoc, 0, 0);
-    renderToScale();
+function gameOver(){
+	$("#imgForca").attr("src", imagem[6]);
+	var qntLetras = respostaAtual.length;
+	elementosDesabilitados();
+	faseAtual++;
+	
+	localStorage.setItem("faseAtual", faseAtual);
+	
+	perguntaAtual = pergunta[faseAtual];
+	perdeu = true;
+	$("#mensagem").removeClass("sucesso");
+	$("#mensagem").text(msg[2]).addClass("erro");
+	$("#bntNovoJogo").show();
+	$("#bntGeraJogador").attr("disabled", "disabled");
+	//fim();
 }
 
-function renderGameOver(){
-    renderContext.clearRect(0, 0, 32, 32);
-    drawSpriteSheetImage(renderContext, gameOverLoc, 5, 7 - birdFrame);
-    renderGround();
-    drawSpriteSheetImage(renderContext, bgLoc, 0, 0);
-    renderToScale();
-    if(++score % 8 == 0){
-        birdFrame++;//this is a quick hack to move the game over logo
-        birdFrame %= 2;
-    }
+function vitoria(){
+	$("#mensagem").removeClass("erro");
+	$("#mensagem").text(msg[1]).addClass("sucesso").show();
+	faseAtual++;
+	
+	localStorage.setItem("faseAtual", faseAtual);
+	
+	tentativas = maxTentativas;
+	elementosDesabilitados();
+	perguntaAtual = pergunta[faseAtual];
+	$("#bntNovoJogo").show();
+	$("#bntGeraJogador").attr("disabled", "disabled");
+	//fim();
 }
 
-function renderHiScore(){
-    renderContext.clearRect(0, 0, 32, 32);
-    drawSpriteSheetImage(renderContext, hiscoreLoc, 1, 5);
-    renderScore(hiScore, renderScoreXHiScore, 16);
-    renderGround();
-    drawSpriteSheetImage(renderContext, bgLoc, 0, 0);
-    renderToScale();
+$("#bntNovoJogo").click(function zeraCampos(){
+	fim();
+	$("#faseAtual").text("Fase " + faseAtual);
+	$("#numTentativas").text("Tentativas: " + tentativas);
+	$("#resposta").text("A resposta correta é: " + respostaAtual).show();
+	$("#perguntaAtual").text("Questão: " + perguntaAtual);
+	
+	var qntLetras = respostaAtual.length;
+	for(var i=0; i<=qntLetras; i++){	
+		$("#l"+i).remove();
+	}
+	$("#bntGeraJogador").removeAttr("disabled", "disabled");
+	$("#respostaInformada").text(" ");
+	$("#letraErrada").text(" ");
+	$("#letraEscolhida").text(" ");
+	$("#jogadorGerado").text(" ");
+	$("#resposta").text(" ").hide();
+	$("#respostaInformada").text(" ").hide();
+	$("#entradaResposta").val(null);
+	$("#entradaLetra").val(null);
+	$("#perguntas").hide();
+	$("#mensagem").hide();
+	
+	$("#bntNovoJogo").hide();
+	
+	acertos = 0;
+	//entrada = null;
+	tentativas = maxTentativas;
+	ganhou = false;
+	perdeu = false;	
+	letraInformada = new Array();
+	letraErrada = new Array();
+	todasLetras = new Array();
+	
+	$("#bntNovoJogo").hide();
+	
+	$("#imgForca").attr("src", imagem[0]);
+	montaPalavra();
+});
+
+function fim(){
+	if(perguntaAtual == "undefined"
+		|| perguntaAtual == ""
+		|| perguntaAtual == null){
+		
+		$("html").append("<h1>Isso é tudo pessoal!</h1>");
+		$("#jogo").remove();
+	}
 }
 
-function renderToScale(){
-    var i, data = renderContext.getImageData(0,0,32, 32).data;
-    for(i=0; i<data.length; i+=4){
-        context.fillStyle = "rgb("+data[i]+","+data[i+1]+","+data[i+2]+")";
-        context.fillRect(((i/4) % 32) * scale, Math.floor(i / 128) * scale, scale, scale);
-    }
-}
-
-function checkCollision(){
-    if(birdX == tubes[activeTube].x + 6){
-        score++;
-    }
-    var collisionData = collisionContext.getImageData(birdX, birdY, 5, 3).data;
-    var data = renderContext.getImageData(birdX, birdY, 5, 3).data;
-    for(var i = 0; i< collisionData.length; i+=4){
-        if(collisionData[i+3] != data[i+3]){
-            gameState = GAME_OVER;
-            if(score > hiScore){
-                hiScore = score + 0;
-            }
-            setTimeout(function(){gameState = HI_SCORE}, 2500);
-            break;
-        }
-    }
-}
-
-function renderScore(score, xFunction, y){
-    var parts = score.toString().split("");
-    var i, index, length = parts.length;
-    for(var i=0; i<length; i++){
-        index = parseInt(parts.pop())*2;
-        scoreLoc.x = scoreLocs[index];
-        scoreLoc.y = scoreLocs[index + 1];
-        //drawSpriteSheetImage(renderContext, scoreLoc, 25 - 5 * i, 1);
-        drawSpriteSheetImage(renderContext, scoreLoc, xFunction(i, length), y);
-    }
-}
-
-function renderScoreXGame(index, total){
-    return 25 - 5 * index;
-}
-
-function renderScoreXHiScore(index, total){
-    return 12 + Math.floor((total/2)*5) - 5 * index;
-}
-
-function renderGround(move){
-    if(move && --groundX < bgLoc.width - groundLoc.width){
-        groundX = 0;
-    }
-    drawSpriteSheetImage(renderContext, groundLoc, groundX, 31);
-}
-
-function updateBirdHome(){
-    drawSpriteSheetImage(renderContext, birdLocs[birdFrame], birdX, birdY);
-    birdFrame++;
-    birdFrame %= 3;
-}
-
-function updateBirdGame(){
-    birdY = Math.round(birdY + birdYSpeed);
-    birdYSpeed += .25;//Gravity, change this to your likings
-    if(birdY < 0){
-        birdY = 0;
-        birdYSpeed = 0;
-    }
-    if(birdY + 3 > bgLoc.height){
-        birdY = 28;
-        birdYSpeed = 0;
-    }
-    renderContext.save();
-    collisionContext.save();
-    renderContext.translate(birdX, birdY);
-    collisionContext.translate(birdX, birdY);
-    drawSpriteSheetImage(renderContext, birdLocs[birdFrame], 0, 0);
-    drawSpriteSheetImage(collisionContext, birdLocs[birdFrame], 0, 0);
-    renderContext.restore();
-    collisionContext.restore();
-    birdFrame++;
-    birdFrame %= 3;
-}
-
-function renderTubes(){
-    var i, tube;
-    activeTube = tubes[0].x < tubes[1].x ? 0 : 1;
-    for(i= 0; i < 2;i++){
-        tube = tubes[i];
-        if(--tube.x <= -6 ){
-            tube.x = 32;
-            setTubeY(tube);
-        }
-        drawSpriteSheetImage(renderContext, tubeLoc, tube.x, tube.y );
-        drawSpriteSheetImage(collisionContext, tubeLoc, tube.x, tube.y );
-    }
-}
-
-function setTubeY(tube){
-    tube.y = Math.floor(Math.random() * (bgLoc.height - tubeLoc.height) );
+function memento(){
+	
+	var passo = localStorage.getItem("passo");
+	
+	if(passo == null || passo == "undefined"
+		|| passo == ""){
+		evento = 0;
+	}
+	evento++;
+	historico.push(evento);
+	localStorage.setItem("passo", evento);
 }
