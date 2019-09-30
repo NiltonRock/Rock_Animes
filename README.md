@@ -1,9 +1,9 @@
 ## BEM VINDOS BÓCOS !!!
-
 >Aqui você encontra um contéudo diversificado, Filmes, animes, livros, cursos e uma loja de camisetas de excelente qualidade.
 >Aproveite o site esta em construção e cada sugestão pode melhorar cada vez mais a qualidade e o conteudo.
 
 
+[![GitHub Logo](/Rock_Animes/game/game.jpg)](/Rock_Animes/game/game.html).
 
 ### FILMES
 
