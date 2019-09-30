@@ -71,13 +71,13 @@ resposta[2] = "Comi pacarai";
 resposta[3] = "Trapezio";
 
 var imagem = new Array();
-imagem[0] = "https://4.bp.blogspot.com/-psq1cvp8ZqA/V1S9Jxrju4I/AAAAAAAAA_4/VGZ7GeSGWaY1UQY0WpENjBUnE621fJVPACLcB/s200/forca0.png";
-imagem[1] = "https://3.bp.blogspot.com/-G70a1KHVTs0/V1S9J0BgL9I/AAAAAAAAA_w/ND8WKk6ffeIA3k9ii1bTfyp-HlOK_4I6QCLcB/s200/forca1.png";
-imagem[2] = "https://1.bp.blogspot.com/-RB6o0ECFMQU/V1S9J1YE1-I/AAAAAAAAA_0/Zod7jdOPLg4nxihqX8DyQoLTLqr1EUS1QCLcB/s200/forca2.png";
-imagem[3] = "https://1.bp.blogspot.com/-_8-j5ol9Fvg/V1S9Kb1_1cI/AAAAAAAABAA/ywK-WN8MYZQTAA9LXUfcoFAEFL3OHdLfQCLcB/s200/forca3.png";
-imagem[4] = "https://2.bp.blogspot.com/-dTFL3jVSS5Q/V1S9KQRuuxI/AAAAAAAABAE/hDo6y6m01tMJ0QmwEeEQyi0CNdxP9HeGwCLcB/s200/forca4.png";
-imagem[5] = "https://3.bp.blogspot.com/-1HoOX4Aze8c/V1S9KiHxpyI/AAAAAAAABAQ/pcnHKw0UbwAKdcaMl6xfkD6ohNLJQnzowCLcB/s200/forca5.png";
-imagem[6] = "https://2.bp.blogspot.com/-AJjWekfS3nQ/V1S9KlnvFMI/AAAAAAAABAM/978o9oBROYoOm4tPJTDk5Zb8hxmN6sqYgCLcB/s200/forca6.png";
+imagem[0] = "forca0.png";
+imagem[1] = "forca1.png";
+imagem[2] = "forca2.png";
+imagem[3] = "forca3.png";
+imagem[4] = "forca4.png";
+imagem[5] = "forca5.png";
+imagem[6] = "forca6.png";
 
 var letraInformada = new Array();
 var letraErrada = new Array();
