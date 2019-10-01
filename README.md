@@ -3,7 +3,7 @@
 >Aproveite o site esta em construção e cada sugestão pode melhorar cada vez mais a qualidade e o conteudo.
 
 
-[![GitHub Logo](/Rock_Animes/game/game.jpg)](/Rock_Animes/game/game.html).
+
 
 ### FILMES
 
@@ -11,10 +11,6 @@
 [![GitHub Logo](/Rock_Animes/filmes.png)](/Rock_Animes/filmes/filmes.html).
 
 
-### Qualquer camiseta R$ 40,00
->Escolha sua camiseta 
-
-[![GitHub Logo](/Rock_Animes/loja.jpg)](/Rock_Animes/loja/camisetas.html).
 
 
 # VIDEOS
