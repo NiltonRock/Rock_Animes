@@ -1,167 +1,251 @@
-🎸 Rock Animes | Projeto de Desenvolvimento Web
+🎸 ROCK ANIMES
+
+Portfólio de Desenvolvimento Web | José Nilton de Souza Cabral
 
 <div align="center">
 
-Entretenimento, tecnologia e aprendizado em um só lugar
-
-Projeto pessoal de desenvolvimento web | Portfólio de José Nilton de Souza Cabral
+Projeto pessoal de desenvolvimento web, entretenimento e educação
 
 
 
 
 
 
-🌐 ACESSAR O SITE | 💻 CÓDIGO-FONTE
+🌐 Visualizar projeto |
+💻 Repositório GitHub |
+👨‍💻 LinkedIn
 
 </div>
 
-📌 Sobre o projeto
+📌 Apresentação
 
-O Rock Animes é um projeto pessoal desenvolvido para colocar em prática conhecimentos de desenvolvimento web e explorar a publicação de conteúdos na internet.
+O Rock Animes é um projeto pessoal desenvolvido com o objetivo de aplicar conhecimentos de programação web, organização de conteúdos e publicação de páginas na internet.
 
-A proposta é reunir diferentes categorias de entretenimento e educação em um único ambiente, incluindo animes, mangás, filmes, vídeos, livros e cursos.
+O site reúne conteúdos de entretenimento e educação, incluindo filmes, vídeos, música, cursos, mangás, animes e livros.
 
-O projeto também representa minha experiência prática com organização de páginas web, manutenção de arquivos, versionamento de código e publicação utilizando GitHub Pages.
+Além do conteúdo apresentado, o projeto demonstra minha experiência prática com HTML, CSS, JavaScript, GitHub e GitHub Pages.
 
-🎯 Objetivos do projeto
-
-Aplicar conhecimentos de HTML, CSS e JavaScript.
-
-Desenvolver e organizar páginas de conteúdo web.
-
-Praticar a estruturação de diretórios e arquivos.
-
-Utilizar GitHub para armazenar e versionar o código-fonte.
-
-Publicar um projeto acessível pela internet.
-
-Evoluir continuamente minhas habilidades em desenvolvimento de software.
-
-🛠️ Tecnologias e ferramentas
+🛠️ Tecnologias utilizadas
 
 Tecnologia
 
-Aplicação
+Finalidade
 
 HTML5
 
-Estruturação das páginas e conteúdos
+Estruturação de páginas web
 
 CSS3
 
-Estilização e apresentação visual
+Estilização visual
 
 JavaScript
 
-Estudos e recursos de programação web
+Programação e recursos web
 
 GitHub
 
-Hospedagem do repositório e versionamento
+Versionamento e armazenamento
 
 GitHub Pages
 
-Publicação do site
+Hospedagem do site
 
 Markdown
 
-Documentação do projeto
+Documentação e apresentação
 
-🗂️ Funcionalidades e seções
+🌐 Explore o Rock Animes
 
-🎬 Filmes e vídeos
+As imagens abaixo funcionam como links para as páginas do projeto.
 
-Área dedicada a conteúdos audiovisuais, com páginas para filmes, vídeos de humor e apresentações musicais.
+🎬 1. Filmes
 
-Explorar filmes
+Área destinada à apresentação de filmes e conteúdos de entretenimento.
 
-Vídeos engraçados
 
-Rock Girls — Covers de guitarra
 
-📚 Cursos e aprendizado
+▶ Acessar página de filmes
 
-Espaço destinado à organização de materiais educacionais e conteúdos de estudo.
+😂 2. Vídeos engraçados
 
-Curso de Python
+Seção de vídeos de humor e entretenimento.
 
-Curso básico de inglês
 
-Curso de JavaScript — em construção
 
-Acessar Python
+▶ Acessar vídeos engraçados
 
-Acessar Inglês
+🎸 3. Rock Girls — Covers de guitarra
 
-📖 Mangás
+Espaço dedicado a apresentações musicais e covers de guitarra.
 
-Seção com páginas dedicadas à leitura de mangás, incluindo conteúdos de One Piece.
 
-Explorar mangás
 
-⛩️ Animes
+▶ Assistir covers de guitarra
 
-Área destinada a conteúdos relacionados à animação japonesa, com páginas de mídia e experimentação.
+📚 4. Cursos e aprendizado
 
-Acessar seção de anime
+Área dedicada à organização de materiais educacionais.
 
-📕 Biblioteca digital
+🇬🇧 Curso básico de inglês
 
-Espaço organizado para disponibilizar e apresentar conteúdos de leitura.
+Conteúdo introdutório para quem deseja iniciar seus estudos na língua inglesa.
 
-Biblioteca Nilton Rock
 
-🧠 Aprendizados e competências
 
-O desenvolvimento e a manutenção deste projeto contribuem para a prática de competências importantes na área de TI:
+▶ Acessar curso de inglês
 
-Estruturação de páginas e navegação web.
+🐍 Curso de Python
 
-Organização de conteúdo e recursos multimídia.
+Espaço dedicado à linguagem Python e aos conteúdos de aprendizagem em programação.
 
-Gerenciamento de arquivos e diretórios.
 
-Versionamento e manutenção de código.
 
-Documentação técnica com Markdown.
+▶ Acessar curso de Python
 
-Publicação e atualização de sites estáticos.
+🟨 Curso de JavaScript
 
-Autonomia na construção e evolução de projetos pessoais.
+Status: Em construção
 
-🚀 Possíveis melhorias futuras
+Área reservada para conteúdos de programação com JavaScript.
 
-O Rock Animes permanece como um projeto em evolução. Algumas melhorias planejadas ou consideradas são:
 
-Modernizar a interface e a identidade visual.
 
-Melhorar a experiência em dispositivos móveis.
+▶ Acessar página de JavaScript
 
-Implementar uma navegação mais intuitiva.
+📖 5. Mangás — One Piece
 
-Criar recursos de pesquisa e filtragem de conteúdo.
+Área dedicada à leitura de mangás, com páginas organizadas por capítulos.
 
-Melhorar acessibilidade e organização do código.
+🏴‍☠️ Página principal de One Piece
 
-Explorar integrações com APIs públicas.
 
-Desenvolver novas funcionalidades com JavaScript.
+
+▶ Acessar One Piece
+
+Capítulo 913 — Tsuru Retribui o Favor
+
+
+
+📖 Ler capítulo 913
+
+Capítulo 914 — Okobore, a Cidade das Sobras
+
+
+
+📖 Ler capítulo 914
+
+Capítulo 915 — O Distrito de Bakura
+
+
+
+📖 Ler capítulo 915
+
+⛩️ 6. Animes
+
+Seção destinada à apresentação de conteúdos relacionados à animação japonesa.
+
+Monster Musume no Iru Nichijou
+
+
+
+▶ Acessar página do anime
+
+📕 7. Biblioteca Nilton Rock
+
+Área dedicada à organização e apresentação de conteúdos de leitura.
+
+
+
+📚 Acessar biblioteca
+
+🎯 Objetivos técnicos
+
+O desenvolvimento do Rock Animes tem como principais objetivos:
+
+Praticar a estruturação de páginas utilizando HTML.
+
+Aplicar conhecimentos de estilização com CSS.
+
+Desenvolver habilidades de programação com JavaScript.
+
+Organizar conteúdos e recursos multimídia.
+
+Trabalhar com navegação entre diferentes páginas.
+
+Utilizar o GitHub como ferramenta de versionamento.
+
+Publicar e manter um site utilizando GitHub Pages.
+
+Aprimorar conhecimentos de desenvolvimento web.
+
+🧠 Competências desenvolvidas
+
+Durante a construção e manutenção do projeto, são exercitadas competências como:
+
+Desenvolvimento Front-end
+
+Estruturação de páginas HTML.
+
+Organização de conteúdo e navegação.
+
+Utilização de imagens e links.
+
+Estilização de páginas web.
+
+Gerenciamento de código
+
+Organização de arquivos e diretórios.
+
+Utilização de repositórios GitHub.
+
+Manutenção e atualização do projeto.
+
+Documentação com Markdown.
+
+Publicação
+
+Hospedagem estática com GitHub Pages.
+
+Disponibilização de páginas na internet.
+
+Atualização de conteúdos publicados.
+
+🚀 Roadmap — Próximas melhorias
+
+O projeto está em constante evolução. Algumas melhorias consideradas são:
+
+Modernização do layout.
+
+Interface responsiva para dispositivos móveis.
+
+Menu de navegação mais intuitivo.
+
+Sistema de pesquisa de conteúdos.
+
+Organização das páginas em componentes reutilizáveis.
+
+Melhorias de acessibilidade.
+
+Integração com APIs públicas.
+
+Exploração de novas funcionalidades em JavaScript.
 
 👨‍💻 Sobre o desenvolvedor
 
 José Nilton de Souza Cabral
 
-Profissional de Tecnologia da Informação com mais de 10 anos de experiência em suporte técnico e atendimento a usuários em ambientes corporativos.
+Profissional de Tecnologia da Informação com mais de 10 anos de experiência em suporte técnico e atendimento em ambientes corporativos.
 
-Graduado em Gestão de Tecnologia da Informação, com estudos em desenvolvimento de sistemas e programação Python.
+Graduado em Gestão de Tecnologia da Informação, com formação complementar em HTML, CSS, Linux e estudos em Python.
 
-Atualmente, busco ampliar minha atuação na área de desenvolvimento de software, aplicando minha experiência em TI à construção de soluções e projetos práticos.
+Tenho como objetivo ampliar minha atuação na área de desenvolvimento de sistemas, aplicando conhecimentos técnicos e experiência profissional na criação de soluções tecnológicas.
 
-O Rock Animes faz parte dessa trajetória de aprendizado e desenvolvimento profissional.
+O Rock Animes representa parte da minha trajetória prática de aprendizagem e desenvolvimento web.
 
-🔗 Contato e redes profissionais
+📫 Contato profissional
 
-GitHub: github.com/NiltonRock
+GitHub: NiltonRock
 
 LinkedIn: José Nilton de Souza Cabral
 
@@ -169,10 +253,10 @@ Projeto online: Rock Animes
 
 <div align="center">
 
-🎸 Rock Animes
+🎸 ROCK ANIMES
 
-Transformando interesse por tecnologia e entretenimento em experiência prática de desenvolvimento.
+Tecnologia, entretenimento e aprendizado
 
-Desenvolvido e mantido por José Nilton de Souza Cabral
+Projeto pessoal desenvolvido e mantido por José Nilton de Souza Cabral.
 
 </div>
